@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "test06_halfadder_behav" "xil_defaultlib.test06_halfadder" -log "elaborate.log" 

@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "t11_sequential7led_behav" "xil_defaultlib.t11_sequential7led" -log "elaborate.log" 

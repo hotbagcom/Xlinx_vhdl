@@ -1,0 +1,200 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Aug  2 08:51:02 2024
+# Process ID: 2808
+# Current directory: C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.runs/synth_1
+# Command line: vivado.exe -log t10_system.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source t10_system.tcl
+# Log file: C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.runs/synth_1/t10_system.vds
+# Journal file: C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.runs/synth_1\vivado.jou
+# Running On: Arif, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 20, Host memory: 14721 MB
+#-----------------------------------------------------------
+source t10_system.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 486.008 ; gain = 181.180
+Command: synth_design -top t10_system -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23180
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 933.348 ; gain = 443.395
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 't10_system' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_system.vhd:46]
+	Parameter Nbit bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 't10_NA' declared at 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_NA.vhd:34' bound to instance 't10_NA_i' of component 't10_NA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_system.vhd:66]
+INFO: [Synth 8-638] synthesizing module 't10_NA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_NA.vhd:47]
+	Parameter Nbit bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 't10_FA' declared at 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:34' bound to instance 't10_FA_i' of component 't10_FA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_NA.vhd:67]
+INFO: [Synth 8-638] synthesizing module 't10_FA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:44]
+INFO: [Synth 8-3491] module 't10_HA' declared at 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_HA.vhd:34' bound to instance 'first_HA' of component 't10_HA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:61]
+INFO: [Synth 8-638] synthesizing module 't10_HA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_HA.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 't10_HA' (0#1) [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_HA.vhd:43]
+INFO: [Synth 8-3491] module 't10_HA' declared at 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_HA.vhd:34' bound to instance 'second_HA' of component 't10_HA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 't10_FA' (0#1) [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:44]
+INFO: [Synth 8-3491] module 't10_FA' declared at 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:34' bound to instance 't10_FA_i' of component 't10_FA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_NA.vhd:67]
+INFO: [Synth 8-3491] module 't10_FA' declared at 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:34' bound to instance 't10_FA_i' of component 't10_FA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_NA.vhd:67]
+INFO: [Synth 8-3491] module 't10_FA' declared at 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:34' bound to instance 't10_FA_i' of component 't10_FA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_NA.vhd:67]
+INFO: [Synth 8-3491] module 't10_FA' declared at 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:34' bound to instance 't10_FA_i' of component 't10_FA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_NA.vhd:67]
+INFO: [Synth 8-3491] module 't10_FA' declared at 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:34' bound to instance 't10_FA_i' of component 't10_FA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_NA.vhd:67]
+INFO: [Synth 8-3491] module 't10_FA' declared at 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:34' bound to instance 't10_FA_i' of component 't10_FA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_NA.vhd:67]
+INFO: [Synth 8-3491] module 't10_FA' declared at 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_FA.vhd:34' bound to instance 't10_FA_i' of component 't10_FA' [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_NA.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 't10_NA' (0#1) [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_NA.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 't10_system' (0#1) [C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.srcs/sources_1/new/t10_system.vhd:46]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1040.285 ; gain = 550.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1040.285 ; gain = 550.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1040.285 ; gain = 550.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1040.285 ; gain = 550.332
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1215.230 ; gain = 725.277
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1215.230 ; gain = 725.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1215.230 ; gain = 725.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1215.230 ; gain = 725.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1215.230 ; gain = 725.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1215.230 ; gain = 725.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1215.230 ; gain = 725.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1215.230 ; gain = 725.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1215.230 ; gain = 725.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT3 |     4|
+|2     |LUT5 |     8|
+|3     |IBUF |    17|
+|4     |OBUF |     9|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    38|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1215.230 ; gain = 725.277
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1215.230 ; gain = 725.277
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1215.230 ; gain = 725.277
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1223.973 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1323.211 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 67e1a343
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 1323.211 ; gain = 837.203
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1323.211 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/arify/OneDrive/Belgeler/VHDL_mitrona_zorunlustaj/project_8/project_8.runs/synth_1/t10_system.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file t10_system_utilization_synth.rpt -pb t10_system_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  2 08:51:38 2024...

@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_8.srcs/sources_1/new/t10_FA.vhd" \
+"../../../../project_8.srcs/sources_1/new/t10_HA.vhd" \
+"../../../../project_8.srcs/sources_1/new/t10_NA.vhd" \
+"../../../../project_8.srcs/sources_1/new/t10_system.vhd" \
+"../../../../project_8.srcs/sim_1/new/tb_t10_system.vhd" \
+
+# Do not sort compile order
+nosort

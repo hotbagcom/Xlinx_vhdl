@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "test08_Nbitadder_behav" "xil_defaultlib.test08_Nbitadder" -log "elaborate.log" 
