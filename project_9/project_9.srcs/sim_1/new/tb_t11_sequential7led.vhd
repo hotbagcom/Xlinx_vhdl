@@ -44,64 +44,64 @@ end tb_t11_sequential7led;
 
 architecture tb_Behavioral of tb_t11_sequential7led is
 -- CONSTANT
--- dot , top , RU , RD , bottom , LD , LU , middle 
---constant Sled_b : std_logic_vector(7 downto 0) := "00000000";
---constant Sled_0 : std_logic_vector(7 downto 0) := "01111110";
---constant Sled_1 : std_logic_vector(7 downto 0) := "01100000";
+
+constant delay_1 : time := 900 ns;
 
 component t11_sequential7led is 
     Port( 
         sw  : in std_logic_vector( 1 downto 0 ) := "01";
-        counter : out std_logic_vector (7 downto 0)
+        counter : out std_logic_vector (7 downto 0);
+        clk_o : out std_logic 
     );
 
 end component t11_sequential7led ;
 
+
+--signal counter_internal : std_logic_vector(7 downto 0) := (others => '0');
 -- signal 
 signal SW_1 : std_logic_vector(1 downto 0) := "10";
 signal COUNTER_1 : std_logic_vector(7 downto 0) :=  Sled_b ;
-
+signal CLK_O1 : std_logic; 
 begin
 
 DUT :  t11_sequential7led 
 port map (
     sw => SW_1 ,
-    counter => counter_1
+    counter => counter_1 ,
+    clk_o => CLK_O1
 );
 
 
 STIMULI : process begin  
-wait for 3 us  ;
+wait for delay_1  ;
 
 
-SW_1 <= x"11" ;
-wait for 3 us  ;
+SW_1 <= "00" ;
+wait for delay_1;
+
+SW_1 <= "01" ;
+wait for delay_1;
+
+SW_1 <= "10" ;
+wait for delay_1;
+
+SW_1 <= "11" ;
+wait for delay_1;
+
+SW_1 <= "10" ;
+wait for delay_1;
+
+SW_1 <= "01" ;
+wait for delay_1;
+
+SW_1 <= "00" ;
+wait for delay_1;
 
 
-SW_1 <= x"00" ;
-wait for 3 us;
-
-
-SW_1 <= x"01" ;
-wait for 3 us;
-
-SW_1 <= x"10" ;
-wait for 3 us;
-
-SW_1 <= x"11" ;
-wait for 3 us;
-
-SW_1 <= x"01" ;
-wait for 3 us;
-
-SW_1 <= x"10" ;
-wait for 3 us;
-
-
-
-assert false 
-report "SIM DONE";
+assert false
+report "SIM DONE"
 severity failure;
-end process
+
+end process;
 
 end tb_Behavioral;

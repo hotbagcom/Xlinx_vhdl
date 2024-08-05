@@ -1,6 +1,7 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
 "../../../../project_9.srcs/sources_1/new/t11_sequential7led.vhd" \
+"../../../../project_9.srcs/sim_1/new/tb_t11_sequential7led.vhd" \
 
 # Do not sort compile order
 nosort

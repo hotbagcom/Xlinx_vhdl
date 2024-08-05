@@ -1,23 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 02.08.2024 14:31:14
--- Design Name: 
--- Module Name: t11_sequential7led - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -38,19 +18,20 @@ entity t11_sequential7led is
     Port(
         --clk : in std_logic ;
         sw  : in std_logic_vector( 1 downto 0 ) := "11";
-        counter : out std_logic_vector (7 downto 0)
+        counter : out std_logic_vector (7 downto 0);
+        clk_o : out std_logic 
     );
 end t11_sequential7led;
 
 architecture Behavioral of t11_sequential7led is
 --constant
-constant        c_clock : integer := 100_000_000 ;
-constant        c_clockPeriod : time := 1000ms / c_clock  ;
+constant        c_clock : integer := 1_000_000_000 ;
+constant        c_clockPeriod : time := (1000 ms / c_clock)  ; -- clock periode is 1 ns 
 
-constant c_timer1nslim : integer := c_clock/100_000 ;
-constant c_timer2nslim : integer := 2*c_timer1nslim ;
-constant c_timer500pslim : integer := c_timer1nslim/2 ;
-constant c_timer250pslim : integer := c_timer1nslim/4 ;
+constant c_timer1xslim : integer := c_clock/10_000_000 ; --100 clock 
+constant c_timer2xslim : integer := 2*c_timer1xslim ;
+constant c_timer4xslim : integer := c_timer1xslim*4 ;
+constant c_timer8Xslim : integer := c_timer1xslim*8 ;
 
 constant Sled_b  : std_logic_vector(7 downto 0) := "00000000";
 constant Sled_0  : std_logic_vector(7 downto 0) := "01111110";
@@ -66,21 +47,21 @@ constant Sled_9  : std_logic_vector(7 downto 0) := "01111011";
 constant Sled_dp : std_logic_vector(7 downto 0) := "10000000";
     
 --signal
-signal timer    : integer range 0 to c_timer2nslim := 0;
-signal timerlim : integer range 0 to c_timer2nslim := 0;
+signal timer    : integer range 0 to c_timer8Xslim := 0;
+signal timerlim : integer range 0 to c_timer8Xslim := 0;
 signal counter_internal : std_logic_vector(7 downto 0) := (others => '0');
 
 signal  clk : std_logic := '1' ;
 
 begin
     --combinational logic assignment
-    timerlim <=     c_timer2nslim when sw= "00"
-            else    c_timer1nslim when sw= "01"
-            else    c_timer500pslim when sw= "10"
-            else    c_timer250pslim;
+    timerlim <=     c_timer8Xslim when sw= "00"       --800ns
+            else    c_timer4Xslim when sw= "01"       --400ns
+            else    c_timer2Xslim when sw= "10"        --200ns
+            else    c_timer1xslim;                     --100ns
             
     clk <= not clk after c_clockPeriod /2 ;
-            
+    clk_o <= clk ;        
     process (clk) begin 
     if(rising_edge(clk)) then
         if(timer >= timerlim -1) then
