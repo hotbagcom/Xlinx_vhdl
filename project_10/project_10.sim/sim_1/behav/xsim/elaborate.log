@@ -11,8 +11,10 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package xil_defaultlib.log2_pck
 Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.log2_pck
 Compiling architecture syn of entity xil_defaultlib.t12_bram [\t12_bram(ram_width=32,ram_depth...]
 Compiling architecture behavioral of entity xil_defaultlib.tb_t12_bram
 Built simulation snapshot tb_t12_bram_behav

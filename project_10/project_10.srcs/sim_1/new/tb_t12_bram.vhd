@@ -24,22 +24,23 @@ library IEEE;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-
-library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
 use work.log2_pck.all;
 
 entity tb_t12_bram is
 generic (
 RAM_WIDTH 		: integer 	:= 32;				-- Specify RAM data width
-RAM_DEPTH 		: integer 	:= 64;				-- Specify RAM depth (number of entries)
+RAM_DEPTH 		: integer 	:= 1024;				-- Specify RAM depth (number of entries)
 RAM_PERFORMANCE : string 	:= "LOW_LATENCY"    -- Select "HIGH_PERFORMANCE" or "LOW_LATENCY" 
 -- RAM_PERFORMANCE : string 	:= "HIGH_PERFORMANCE"    -- Select "HIGH_PERFORMANCE" or "LOW_LATENCY"
 );
@@ -50,7 +51,7 @@ architecture Behavioral of tb_t12_bram is
 component t12_bram is
 generic (
 RAM_WIDTH 		: integer 	:= 32;				-- Specify RAM data width
-RAM_DEPTH 		: integer 	:= 64;				-- Specify RAM depth (number of entries)
+RAM_DEPTH 		: integer 	:= 1024;				-- Specify RAM depth (number of entries)
 RAM_PERFORMANCE : string 	:= "LOW_LATENCY"    -- Select "HIGH_PERFORMANCE" or "LOW_LATENCY" 
 );
 port (
@@ -69,6 +70,9 @@ signal wea   : std_logic 										:= '0';
 signal douta_1 : std_logic_vector(RAM_WIDTH-1 downto 0);
 
 constant c_clkperiod	: time := 10 ns;
+signal  adress_0 : integer range 0 to (RAM_DEPTH-1)  := 0 ;
+
+
 
 begin
 
@@ -96,46 +100,53 @@ wait for c_clkperiod/2;
 end process P_CLKGEN;
 
 
-D_loop : process begin 
-constant  adress_0 : std_logic_vector( (log2_c(RAM_DEPTH)-1) downto 0 ) := '000000' ;
-
-
-end process D_loop ;
-
-
 
 P_STIMULI : process begin
 
 
 
 
-wea		<= '1';
-addra 	<= "000000";
-dina	<= x"F0F0F0F0";
-wait for c_clkperiod;
-addra 	<= "000001";
-dina	<= x"1234FFFF";
-wait for c_clkperiod;
-addra 	<= "000010";
-dina	<= x"ABCD0000";
-wait for c_clkperiod;
-addra 	<= "000011";
-dina	<= x"00111100";
+--wea		<= '1';
+--addra 	<= "000000";
+--dina	<= x"F0F0F0F0";
+--wait for c_clkperiod;
+--addra 	<= "000001";
+--dina	<= x"1234FFFF";
+--wait for c_clkperiod;
+--addra 	<= "000010";
+--dina	<= x"ABCD0000";
+--wait for c_clkperiod;
+--addra 	<= "000011";
+--dina	<= x"00111100";
 
 
 
-wait for c_clkperiod/2;
-wea		<= '0';
+--wait for c_clkperiod/2;
+--wea		<= '0';
 
-wait for c_clkperiod/2;
-addra 	<= "000000";
-wait for c_clkperiod;
-addra 	<= "000001";
-wait for c_clkperiod;
-addra 	<= "000010";
-wait for c_clkperiod;
-addra 	<= "000011";
-wait for c_clkperiod;
+--wait for c_clkperiod/2;
+--addra 	<= "000000";
+--wait for c_clkperiod;
+--addra 	<= "000001";
+--wait for c_clkperiod;
+--addra 	<= "000010";
+--wait for c_clkperiod;
+--addra 	<= "000011";
+--wait for c_clkperiod;
+
+
+
+for p in 0 to RAM_DEPTH-1 loop
+addra <= std_logic_vector(to_unsigned(p , log2_c(RAM_DEPTH) ));
+wait for c_clkperiod/2; 
+end loop;
+
+for u in RAM_DEPTH-1 downto 0 loop
+addra <= std_logic_vector(to_unsigned(u , log2_c(RAM_DEPTH) ));
+wait for c_clkperiod/2; 
+end loop;
+
+
 
 assert false ;
 report "SIM DONE";
