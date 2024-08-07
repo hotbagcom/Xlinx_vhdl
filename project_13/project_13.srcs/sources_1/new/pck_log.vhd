@@ -21,7 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use IEEE.NUMERIC_STD.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -33,7 +33,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 package pck_log is
 function log2( input :in natural ) return integer;
+
+constant X_clk : integer := 1_000_000_000 ;
+
 end  pck_log ;
+
+
+
+
 
 
 package body  pck_log is
