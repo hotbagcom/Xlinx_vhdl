@@ -26,7 +26,7 @@ use work.pck_log.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
-use IEEE.NUMERIC_STD.ALL;
+
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -81,7 +81,7 @@ end process;
 Sinwave : t15_wave_bram 
     generic map(
     RAM_WIDTH 		=> WAVElevelBIT,
-    RAM_DEPTH 		=> WAVEfreqBIT ,
+    RAM_DEPTH 		=>  to_unsigned( std_logic_vector(WAVEfreqBIT'range) ) ,
     RAM_PERFORMANCE => "LOW_LATENCY" 
     )
     port map(
@@ -96,9 +96,9 @@ Coswave : t15_wave_bram
     RAM_WIDTH 		=> WAVElevelBIT,
     RAM_DEPTH 		=> WAVEfreqBIT ,
     RAM_PERFORMANCE => "LOW_LATENCY" 
-    )
+    ) 
     port map(
-    clk     => onoff_clk ,                                     
+    clk     => clk ,                                     
     rst     => reset ,                                    
     addr    =>  temp_adress,
     dout    => Cos_val       
