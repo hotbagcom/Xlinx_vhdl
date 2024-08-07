@@ -35,14 +35,14 @@ use work.pck_log.all;
 
 entity t15_dds_v2 is
     Generic (
-        X_clk : integer := 1_000_000_000 ;                
+                        
         WAVEfreqBIT     :integer := 28; 
         WAVElevelBIT    :integer := 16 
      );
     Port (
         clk         : in std_logic ;
         reset       : in std_logic ; 
-        Wave_freq   : in std_ulogic_vector(WAVEfreqBIT-1 downto 0):= std_ulogic_vector( to_unsigned(1_000 , WAVEfreqBIT ) );
+        Wave_freq   : in std_ulogic_vector(WAVEfreqBIT-1 downto 0);
         temp_adress : in std_logic_vector(WAVElevelBIT-1 downto 0);
         Sin_val     :out std_logic_vector(WAVElevelBIT-1 downto 0);
         Cos_val     :out std_logic_vector(WAVElevelBIT-1 downto 0)
@@ -72,10 +72,6 @@ architecture bhvral_top of t15_dds_v2 is
     
 begin
 
-process (clk) begin
-wait for wave_periode /2;
-onoff_clk <= not onoff_clk;
-end process;
 
 
 Sinwave : t15_wave_bram 
