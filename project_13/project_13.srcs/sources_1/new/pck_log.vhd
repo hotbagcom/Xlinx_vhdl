@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 package pck_log is
 function log2( input :in natural ) return integer;
-
+function math2dpow (input :in natural ) return integer;
 constant X_clk : integer := 1_000_000_000 ;
 
 end  pck_log ;
@@ -52,6 +52,18 @@ function log2( input :in natural ) return integer is
     while temp > 1 loop 
         return_val := return_val +1 ;
         temp := temp /2 ;
+    end loop;
+    return return_val ;
+end function ;
+
+function math2dpow( input :in natural ) return integer is
+    variable temp       : integer := input ;
+    variable return_val : integer := 1;
+    
+    begin 
+    while temp >= 1 loop 
+        temp := temp -1 ;
+        return_val := return_val *2 ;
     end loop;
     return return_val ;
 end function ;
