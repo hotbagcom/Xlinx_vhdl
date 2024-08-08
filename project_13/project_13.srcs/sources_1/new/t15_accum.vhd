@@ -52,7 +52,6 @@ architecture bhvl_accum of t15_accum is
 ------- CONSTANT -------
 
 ------- VARIABLE -------
-shared variable  delta_incr : std_logic_vector(Ram_depth-1 downto 0 ) := x"10";
 
 ------- SIGNAL -------
 signal accum_value : std_logic_vector( Accum_bitsize - 1 downto 0 ) := x"00000";
@@ -66,11 +65,10 @@ process (clk , rst )
 begin 
     
     if (rst= '1' and rising_edge(clk)) then -- todo clk or rst
-       delta_incr := (others=> '0' ) ;
        accum_value <= (others=> '0' ) ;
        addrs <= (others=> '0' ) ;
     elsif rising_edge(clk)then 
-        accum_value <= std_logic_vector ( unsigned (accum_value) + unsigned(delta_incr) );
+        accum_value <= std_logic_vector ( unsigned (accum_value) + unsigned(w_freq) );
     end if ;
     
     addrs <= accum_value(Ram_width_bitsize-1 downto 0);
