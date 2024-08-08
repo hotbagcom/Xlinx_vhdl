@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "t15_dds_v2_behav" "xil_defaultlib.t15_dds_v2" -log "elaborate.log" 

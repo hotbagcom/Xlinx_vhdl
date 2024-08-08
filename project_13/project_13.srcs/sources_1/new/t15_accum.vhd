@@ -43,7 +43,7 @@ entity t15_accum is
         clk :in std_logic;
         rst :in std_logic ; 
         w_freq :in std_logic_vector(Ram_depth_bitsize-1 downto 0);
-        addrs : out std_logic_vector(Ram_width_bitsize-1 downto 0)
+        addrs : out std_logic_vector(Ram_depth_bitsize-1 downto 0)
      );
 end t15_accum;
 
@@ -61,17 +61,17 @@ begin
 
 
 process (clk , rst ) 
-
 begin 
     
-    if (rst= '1' and rising_edge(clk)) then -- todo clk or rst
-       accum_value <= (others=> '0' ) ;
-       addrs <= (others=> '0' ) ;
-    elsif rising_edge(clk)then 
-        accum_value <= std_logic_vector ( unsigned (accum_value) + unsigned(w_freq) );
+    if rising_edge(clk) then -- todo clk or rst
+        if (rst= '1' ) then
+           accum_value <= (others=> '0' ) ;
+           addrs <= (others=> '0' ) ;
+        else--if  (rst= '0' ) then
+            accum_value <= std_logic_vector ( unsigned (accum_value) + unsigned(w_freq) );
+        end if ;
     end if ;
-    
-    addrs <= accum_value(Ram_width_bitsize-1 downto 0);
+    addrs <= accum_value(Ram_depth_bitsize-1 downto 0);
    
 end process  ;
 

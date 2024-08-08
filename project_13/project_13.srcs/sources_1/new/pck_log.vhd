@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 package pck_log is
 function log2( input :in natural ) return integer;
-function math2dpow (input :in natural ) return integer;
+function powof2 (input :in natural ) return integer;
 constant X_clk : integer := 1_000_000_000 ;
 
 end  pck_log ;
