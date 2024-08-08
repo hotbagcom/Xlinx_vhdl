@@ -35,14 +35,14 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity t15_accum is
     Generic (   
-        Ram_width_bitsize : integer ;
-        Ram_depth : integer ;
+        Ram_width_bitsize : integer := 16;
+        Ram_depth_bitsize : integer := 11;
         Accum_bitsize :integer := 28
      );
     Port (
         clk :in std_logic;
         rst :in std_logic ; 
-        w_freq :in std_logic_vector(Ram_depth-1 downto 0);
+        w_freq :in std_logic_vector(Ram_depth_bitsize-1 downto 0);
         addrs : out std_logic_vector(Ram_width_bitsize-1 downto 0)
      );
 end t15_accum;
@@ -54,7 +54,7 @@ architecture bhvl_accum of t15_accum is
 ------- VARIABLE -------
 
 ------- SIGNAL -------
-signal accum_value : std_logic_vector( Accum_bitsize - 1 downto 0 ) := x"00000";
+signal accum_value : std_logic_vector( Accum_bitsize - 1 downto 0 ) := (others => '0');
 
 begin
 

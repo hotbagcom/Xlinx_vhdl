@@ -56,7 +56,7 @@ function log2( input :in natural ) return integer is
     return return_val ;
 end function ;
 
-function math2dpow( input :in natural ) return integer is
+function powof2( input :in natural ) return integer is
     variable temp       : integer := input ;
     variable return_val : integer := 1;
     

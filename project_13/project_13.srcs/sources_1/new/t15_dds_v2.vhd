@@ -23,6 +23,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- TODO fill logarithm package 
 use work.pck_log.all;
 
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -35,21 +36,37 @@ use work.pck_log.all;
 
 entity t15_dds_v2 is
     Generic (
-                        
-        WAVEfreqBIT     :integer := 28; 
-        WAVElevelBIT    :integer := 16 
+        sys_ram_width_bitnum    :integer := 16 ;    --ram width
+        sys_ram_depth    :integer := 2048           --ram depth    
      );
     Port (
         clk         : in std_logic ;
         reset       : in std_logic ; 
-        Wave_freq   : in std_ulogic_vector(WAVEfreqBIT-1 downto 0);
-        temp_adress : in std_logic_vector(WAVElevelBIT-1 downto 0);
-        Sin_val     :out std_logic_vector(WAVElevelBIT-1 downto 0);
-        Cos_val     :out std_logic_vector(WAVElevelBIT-1 downto 0)
+        Wave_freq   : in std_logic_vector(log2(sys_ram_depth)-1 downto 0);
+        Sin_val     :out std_logic_vector(sys_ram_width_bitnum-1 downto 0);
+        Cos_val     :out std_logic_vector(sys_ram_width_bitnum-1 downto 0)
      );
 end t15_dds_v2;
 
 architecture bhvral_top of t15_dds_v2 is
+------------------ SIGANL ------------------
+    signal  ram_adress : std_logic_vector(log2(sys_ram_depth)-1 downto 0);
+
+------------------ COMPONENT ------------------
+    component t15_accum is
+    Generic (   
+        Ram_width_bitsize : integer ;       --ram width
+        Ram_depth_bitsize : integer ;       --ram depth 
+        Accum_bitsize :integer --:= 28
+     );
+    Port (
+        clk :in std_logic;
+        rst :in std_logic ; 
+        w_freq :in std_logic_vector( log2(Ram_depth_bitsize)-1 downto 0);
+        addrs :out std_logic_vector( log2(Ram_depth_bitsize)-1 downto 0)
+     );
+    end component t15_accum;
+
     component t15_wave_bram is
         generic(
             RAM_WIDTH 		: integer 	;				-- Specify RAM data width
@@ -59,44 +76,53 @@ architecture bhvral_top of t15_dds_v2 is
         port (
             clk : in std_logic;                                         --for control by wave_freq
             rst  : in std_logic;                                         --for give an outpot (0 for out of some bandwidth)
-            addr: in std_logic_vector(log2(RAM_DEPTH)-1 downto 0);    --ram line 
+            addr: in std_logic_vector(RAM_DEPTH-1 downto 0);    --ram line 
             dout: out std_logic_vector(RAM_WIDTH-1 downto 0)            --ram line value
         );
-    end component;
+    end component t15_wave_bram;
     
-    signal addr_first : std_logic_vector(WAVEfreqBIT-1 downto 0);
-    signal addr_second : std_logic_vector(WAVEfreqBIT-1 downto 0);
-    signal onoff_clk : std_logic := '1';
-    signal wave_periode : integer := X_clk/Wave_freq;
+    signal addr_first : std_logic_vector(WAVElevelNUM-1 downto 0);
+    signal addr_second : std_logic_vector(WAVElevelNUM-1 downto 0);
     
     
 begin
 
-
+ACC : t15_accum 
+    generic map(
+        Ram_width_bitsize 	=> WAVElevelBIT,
+        Ram_depth_bitsize   => sys_ram_depth,
+        Accum_bitsize       => 28
+    )
+    port map(
+        clk     => clk , 
+        rst     => RESET ,
+        w_freq  => Wave_freq ,
+        addrs   => ram_adress
+    );
+    
 
 Sinwave : t15_wave_bram 
     generic map(
-    RAM_WIDTH 		=> WAVElevelBIT,
-    RAM_DEPTH 		=>  to_unsigned( std_logic_vector(WAVEfreqBIT'range) ) ,
+    RAM_WIDTH 		=> sys_ram_width_bitnum,
+    RAM_DEPTH 		=>  sys_ram_depth ,
     RAM_PERFORMANCE => "LOW_LATENCY" 
     )
     port map(
-    clk     => onoff_clk ,                                     
-    rst     => reset ,      
-    --TODO adres döndürme iþlemini nasýl yapacak                              
-    addr    =>  temp_adress,
+    clk     => clk ,                                     
+    rst     => reset ,                                  
+    addr    => ram_adress ,
     dout    => Sin_val       
     );
 Coswave : t15_wave_bram 
     generic map(
     RAM_WIDTH 		=> WAVElevelBIT,
-    RAM_DEPTH 		=> WAVEfreqBIT ,
+    RAM_DEPTH 		=> sys_ram_depth ,
     RAM_PERFORMANCE => "LOW_LATENCY" 
     ) 
     port map(
     clk     => clk ,                                     
     rst     => reset ,                                    
-    addr    =>  temp_adress,
+    addr    => ram_adress ,
     dout    => Cos_val       
     );
 
