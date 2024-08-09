@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_t15_dds_v2_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="pck_log" />
+            <top_module name="tb_t15_dds_v2" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="3,250.001 ns"></ZoomEndTime>
+      <Cursor1Time time="3,250.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="340"></NameColumnWidth>
+      <ValueColumnWidth column_width="155"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/tb_t15_dds_v2/P_clk" type="other">
+      <obj_property name="ElementShortName">P_clk</obj_property>
+      <obj_property name="ObjectShortName">P_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_t15_dds_v2/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_t15_dds_v2/C_Wave_freq" type="array">
+      <obj_property name="ElementShortName">C_Wave_freq[10:0]</obj_property>
+      <obj_property name="ObjectShortName">C_Wave_freq[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_t15_dds_v2/C_Sin_val" type="array">
+      <obj_property name="ElementShortName">C_Sin_val[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_Sin_val[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_t15_dds_v2/C_Cos_val" type="array">
+      <obj_property name="ElementShortName">C_Cos_val[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_Cos_val[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_t15_dds_v2/C_sys_ram_width_bitnum" type="other">
+      <obj_property name="ElementShortName">C_sys_ram_width_bitnum</obj_property>
+      <obj_property name="ObjectShortName">C_sys_ram_width_bitnum</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_t15_dds_v2/C_sys_ram_depth" type="other">
+      <obj_property name="ElementShortName">C_sys_ram_depth</obj_property>
+      <obj_property name="ObjectShortName">C_sys_ram_depth</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_t15_dds_v2/W_point" type="other">
+      <obj_property name="ElementShortName">W_point</obj_property>
+      <obj_property name="ObjectShortName">W_point</obj_property>
+   </wvobject>
+</wave_config>

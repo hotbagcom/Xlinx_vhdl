@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Aug  8 12:29:12 2024
-# Process ID: 14856
+# Start of session at: Fri Aug  9 09:34:10 2024
+# Process ID: 13404
 # Current directory: C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.runs/synth_1
 # Command line: vivado.exe -log t15_dds_v2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source t15_dds_v2.tcl
 # Log file: C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.runs/synth_1/t15_dds_v2.vds
@@ -18,28 +18,38 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4456
+INFO: [Synth 8-7075] Helper process launched with PID 13408
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 931.164 ; gain = 443.984
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 931.797 ; gain = 441.473
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 't15_dds_v2' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:50]
-	Parameter Ram_width_bitsize bound to: 16 - type: integer 
-	Parameter Ram_depth_bitsize bound to: 2048 - type: integer 
+	Parameter Ram_width_bitsize bound to: 32 - type: integer 
+	Parameter Ram_depth_bitsize bound to: 12 - type: integer 
 	Parameter Accum_bitsize bound to: 28 - type: integer 
-INFO: [Synth 8-3491] module 't15_accum' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:36' bound to instance 'ACC' of component 't15_accum' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:88]
+INFO: [Synth 8-3491] module 't15_accum' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:36' bound to instance 'ACC' of component 't15_accum' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:90]
 INFO: [Synth 8-638] synthesizing module 't15_accum' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:50]
-	Parameter Ram_width_bitsize bound to: 16 - type: integer 
-	Parameter Ram_depth_bitsize bound to: 2048 - type: integer 
+	Parameter Ram_width_bitsize bound to: 32 - type: integer 
+	Parameter Ram_depth_bitsize bound to: 12 - type: integer 
 	Parameter Accum_bitsize bound to: 28 - type: integer 
-ERROR: [Synth 8-27] else clause after check for clock not supported [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:71]
-ERROR: [Synth 8-285] failed synthesizing module 't15_accum' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 't15_accum' (0#1) [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:50]
+	Parameter RAM_WIDTH bound to: 32 - type: integer 
+	Parameter RAM_DEPTH bound to: 4096 - type: integer 
+	Parameter RAM_PERFORMANCE bound to: LOW_LATENCY - type: string 
+INFO: [Synth 8-3491] module 't15_wave_bram' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_wave_bram.vhd:36' bound to instance 'Sinwave' of component 't15_wave_bram' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:105]
+INFO: [Synth 8-638] synthesizing module 't15_wave_bram' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_wave_bram.vhd:50]
+	Parameter RAM_WIDTH bound to: 32 - type: integer 
+	Parameter RAM_DEPTH bound to: 4096 - type: integer 
+	Parameter RAM_PERFORMANCE bound to: LOW_LATENCY - type: string 
+ERROR: [Synth 8-3302] unable to open file 'read_only_mem.mem' in 'r' mode [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_wave_bram.vhd:55]
+ERROR: [Synth 8-421] mismatched array sizes in rhs and lhs of assignment [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_wave_bram.vhd:68]
+ERROR: [Synth 8-285] failed synthesizing module 't15_wave_bram' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_wave_bram.vhd:50]
 ERROR: [Synth 8-285] failed synthesizing module 't15_dds_v2' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:50]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1039.957 ; gain = 552.777
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1044.035 ; gain = 553.711
 ---------------------------------------------------------------------------------
 synthesize failed
 INFO: [Common 17-83] Releasing license: Synthesis
-8 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+11 Infos, 0 Warnings, 0 Critical Warnings and 5 Errors encountered.
 synth_design failed
 ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
-INFO: [Common 17-206] Exiting Vivado at Thu Aug  8 12:29:22 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  9 09:34:21 2024...

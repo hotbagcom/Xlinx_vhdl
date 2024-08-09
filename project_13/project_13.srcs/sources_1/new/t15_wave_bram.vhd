@@ -60,17 +60,23 @@ begin -- function
     readline(RamFile , RamFileLine);
     read(RamFileLine , RAM(k));
     end loop;
-    return RAm;
+    return RAM;
+    
+    report "ram writed" ;
 end function;
 
 signal ROM : RamType := InitRamFromFile("read_only_mem.mem");
 
+signal S_dout : std_logic_vector(RAM_WIDTH-1 downto 0) ;
+
 begin --architecture
 
 process (clk) begin 
-    if rising_edge(clk) then 
-        dout <=  std_logic_vector(to_stdulogicvector ( ROM( to_integer  (unsigned(addr)) )  )   )  ;
+    if (rising_edge(clk) ) then 
+        S_dout <=  (to_stdlogicvector ( ROM( to_integer  (unsigned(addr)) )  )   )  ;
     end if;
+    dout <= S_dout ;
+     ---------------------------------------------------------------------report "inside ram  : " & to_string(S_dout) ;
 end process ;
-
+    
 end Behavioral;

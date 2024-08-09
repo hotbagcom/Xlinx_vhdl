@@ -34,6 +34,7 @@ use IEEE.NUMERIC_STD.ALL;
 package pck_log is
 function log2( input :in natural ) return integer;
 function powof2 (input :in natural ) return integer;
+function to_string(slv: std_logic_vector) return string ; --chatgpt
 constant X_clk : integer := 1_000_000_000 ;
 
 end  pck_log ;
@@ -67,4 +68,14 @@ function powof2( input :in natural ) return integer is
     end loop;
     return return_val ;
 end function ;
+
+function to_string(slv: std_logic_vector) return string is
+    variable result: string(1 to slv'length);
+begin
+    for i in slv'range loop
+        result(i - slv'low + 1) := character'VALUE(std_ulogic'IMAGE(slv(i)));
+    end loop;
+    return result;
+end function;
+
 end package body pck_log ;

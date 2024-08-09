@@ -22,7 +22,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 -- TODO fill logarithm package 
 use work.pck_log.all;
-
+use IEEE.Numeric_std.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -35,8 +35,8 @@ use work.pck_log.all;
 
 entity t15_dds_v2 is
     Generic (
-        sys_ram_width_bitnum    :integer := 16 ;    --ram width
-        sys_ram_depth    :integer := 2048           --ram depth    
+        sys_ram_width_bitnum    :integer := 32 ;    --ram width
+        sys_ram_depth    :integer  := 4096          --ram depth    
      );
     Port (
         clk         : in std_logic ;
@@ -48,9 +48,14 @@ entity t15_dds_v2 is
 end t15_dds_v2;
 
 architecture bhvral_top of t15_dds_v2 is
+
 ------------------ SIGANL ------------------
     signal  ram_adress : std_logic_vector(log2(sys_ram_depth)-1 downto 0);
-
+    
+    signal S_Sin_val     : std_logic_vector(sys_ram_width_bitnum-1 downto 0);
+    signal S_Cos_val     : std_logic_vector(sys_ram_width_bitnum-1 downto 0);
+    signal S_phaseshift  : std_logic_vector(log2(sys_ram_depth)-1 downto 0)  ;
+    
 ------------------ COMPONENT ------------------
     component t15_accum is
         Generic (   
@@ -78,10 +83,7 @@ architecture bhvral_top of t15_dds_v2 is
             dout: out std_logic_vector(RAM_WIDTH-1 downto 0)            --ram line value
         );
     end component t15_wave_bram;
-    
-    signal addr_first : std_logic_vector(log2(sys_ram_depth)-1 downto 0);
-    signal addr_second : std_logic_vector(log2(sys_ram_depth)-1 downto 0);
-    
+
     
 begin
 
@@ -95,6 +97,7 @@ ACC : t15_accum
         clk     => clk , 
         rst     => reset ,
         w_freq  => Wave_freq ,
+        
         addrs   => ram_adress
     );
     
@@ -108,8 +111,12 @@ Sinwave : t15_wave_bram
     port map(
     clk     => clk ,                                    
     addr    => ram_adress ,
-    dout    => Sin_val       
+    
+    dout    => S_Sin_val       
     );
+    
+    S_phaseshift <= std_logic_vector( unsigned(ram_adress) + to_unsigned( sys_ram_depth/4 , log2(sys_ram_depth) ) );
+    
 Coswave : t15_wave_bram 
     generic map(
     RAM_WIDTH 		=> sys_ram_width_bitnum,
@@ -118,11 +125,15 @@ Coswave : t15_wave_bram
     ) 
     port map(
     clk     => clk ,                                     
-    addr    => ram_adress ,
-    dout    => Cos_val       
+    addr    =>  S_phaseshift ,
+    
+    
+   -- std_logic_vector( unsigned() + to_unsigned(  stdlogicvector(sys_ram_depth) sra 2) ) 
+    dout    => S_Cos_val       
     );
 
+    Sin_val <=S_Sin_val;
 
-
+    Cos_val <=S_Cos_val;
 
 end bhvral_top;

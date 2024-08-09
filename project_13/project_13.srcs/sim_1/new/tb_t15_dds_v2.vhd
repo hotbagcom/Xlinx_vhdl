@@ -34,30 +34,32 @@ use IEEE.numeric_std.all;
 
 entity tb_t15_dds_v2 is
     Generic (
-        sys_ram_width_bitnum    :integer := 16 ;    --ram width
-        sys_ram_depth    :integer := 2048           --ram depth    
+        C_sys_ram_width_bitnum    :integer := 32 ;    --ram width
+        C_sys_ram_depth    :integer := 4096           --ram depth    
      );
-    Port ( 
-        C_Sin_val     :out std_logic_vector(sys_ram_width_bitnum-1 downto 0);
-        C_Cos_val     :out std_logic_vector(sys_ram_width_bitnum-1 downto 0) 
-    );
+
 end tb_t15_dds_v2;
 
 architecture bhvrl_tb_top of tb_t15_dds_v2 is
 
-signal P_clk : time := 1000ms / X_clk; 
+constant W_point : integer := 1024 ;
+
+
+signal P_clk : time := 1_000ms / X_clk; -- 1ps
 signal clk : std_logic := '1';
 
-signal C_Wave_freq :  std_logic_vector(log2(sys_ram_depth)-1 downto 0) := ( x"00000100" );
+    signal C_Wave_freq :  std_logic_vector(log2(C_sys_ram_depth)-1 downto 0) :=   x"006"; 
+    
+    signal    C_Sin_val     : std_logic_vector(C_sys_ram_width_bitnum-1 downto 0);
+    signal    C_Cos_val     : std_logic_vector(C_sys_ram_width_bitnum-1 downto 0) ;
+    
 
-constant C_sys_ram_width_bitnum : integer := 16 ; 
-constant C_sys_ram_depth : integer := 2048 ;
 
 
 component t15_dds_v2 is
   Generic  (
-        sys_ram_width_bitnum    :integer := 16 ;    --ram width
-        sys_ram_depth    :integer := 2048           --ram depth    
+        sys_ram_width_bitnum    :integer ;    --ram width
+        sys_ram_depth    :integer           --ram depth    
      );
     Port (
         clk         : in std_logic ;
@@ -84,29 +86,184 @@ port map(
 
 STIMULTI : process begin 
 
+
 clk <= '0';
-wait for P_clk;
 
-
-C_Wave_freq <= x"00200";
-
-for y in 0 to 1024 loop
-wait for P_clk;
+for y in 0 to W_point loop
+wait for P_clk/2;
 clk <= '1';
-wait for P_clk;
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+C_Wave_freq <= x"008";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
 clk <= '0';
 end loop;
 
 
 
-C_Wave_freq <= x"00080";
+C_Wave_freq <= x"00C";
 
-for y in 0 to 1024 loop
-wait for P_clk;
+for y in 0 to W_point loop
+wait for P_clk/2;
 clk <= '1';
-wait for P_clk;
+wait for P_clk/2;
 clk <= '0';
 end loop;
+
+
+C_Wave_freq <= x"010";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+C_Wave_freq <= x"020";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+C_Wave_freq <= x"030";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+C_Wave_freq <= x"040";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+C_Wave_freq <= x"080";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+C_Wave_freq <= x"0A0";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+C_Wave_freq <= x"0C0";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+C_Wave_freq <= x"100";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+C_Wave_freq <= x"400";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+
+C_Wave_freq <= x"012";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+
+C_Wave_freq <= x"010";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+
+C_Wave_freq <= x"00E";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+
+C_Wave_freq <= x"00C";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+
+C_Wave_freq <= x"008";
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+
+
+
+
 
 assert false 
 report "Sým Done"
