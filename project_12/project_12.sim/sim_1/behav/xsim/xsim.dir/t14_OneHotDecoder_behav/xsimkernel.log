@@ -1,7 +1,7 @@
-Running: xsim.dir/t14_OneHotDecoder_behav/xsimk.exe -simmode gui -wdb t14_OneHotDecoder_behav.wdb -simrunnum 0 -socket 51104
+Running: xsim.dir/t14_OneHotDecoder_behav/xsimk.exe -simmode gui -wdb t14_OneHotDecoder_behav.wdb -simrunnum 0 -socket 55140
 Design successfully loaded
-Design Loading Memory Usage: 8756 KB (Peak: 8756 KB)
+Design Loading Memory Usage: 8760 KB (Peak: 8760 KB)
 Design Loading CPU Usage: 0 ms
 Simulation completed
-Simulation Memory Usage: 9232 KB (Peak: 9232 KB)
+Simulation Memory Usage: 9244 KB (Peak: 9244 KB)
 Simulation CPU Usage: 0 ms

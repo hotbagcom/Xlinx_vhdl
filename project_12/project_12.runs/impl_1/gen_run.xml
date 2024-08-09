@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchTime="0">
+  <File Type="PLACE-UTIL" Name="t14_OneHotDecoder_utilization_placed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="t14_OneHotDecoder_power_summary_routed.pb"/>
+  <File Type="OPT-DRC" Name="t14_OneHotDecoder_drc_opted.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="t14_OneHotDecoder_utilization_placed.pb"/>
+  <File Type="PLACE-IO" Name="t14_OneHotDecoder_io_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="t14_OneHotDecoder_control_sets_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="t14_OneHotDecoder_power_routed.rpx"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="t14_OneHotDecoder_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="t14_OneHotDecoder_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="t14_OneHotDecoder_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="t14_OneHotDecoder_route_status.pb"/>
+  <File Type="ROUTE-PWR" Name="t14_OneHotDecoder_power_routed.rpt"/>
+  <File Type="ROUTE-DRC" Name="t14_OneHotDecoder_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="t14_OneHotDecoder_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="t14_OneHotDecoder_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="t14_OneHotDecoder_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="t14_OneHotDecoder_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="t14_OneHotDecoder_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-SIMILARITY" Name="t14_OneHotDecoder_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="t14_OneHotDecoder_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="t14_OneHotDecoder_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="t14_OneHotDecoder_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="t14_OneHotDecoder_bus_skew_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="t14_OneHotDecoder_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="t14_OneHotDecoder_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="t14_OneHotDecoder_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="t14_OneHotDecoder_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="t14_OneHotDecoder_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="t14_OneHotDecoder_bus_skew_postroute_physopted.pb"/>
+</GenRun>
