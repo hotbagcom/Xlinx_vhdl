@@ -41,7 +41,7 @@ entity t15_dds_v2 is
     Port (
         clk         : in std_logic ;
         reset       : in std_logic :='0' ; 
-        Wave_freq   : in std_logic_vector(log2(sys_ram_depth)-1 downto 0);
+        Wave_freq   : in integer range 1 to x_clk/10 ; 
         Sin_val     :out std_logic_vector(sys_ram_width_bitnum-1 downto 0);
         Cos_val     :out std_logic_vector(sys_ram_width_bitnum-1 downto 0)
      );
@@ -66,7 +66,7 @@ architecture bhvral_top of t15_dds_v2 is
         Port (
             clk :in std_logic;
             rst :in std_logic ; 
-            w_freq :in std_logic_vector( Ram_depth_bitsize-1 downto 0);
+            w_freq :in integer range 1 to x_clk/10  ; 
             addrs :out std_logic_vector( Ram_depth_bitsize-1 downto 0)
          );
     end component t15_accum;

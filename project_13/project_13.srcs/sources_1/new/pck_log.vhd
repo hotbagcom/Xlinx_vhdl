@@ -35,8 +35,11 @@ package pck_log is
 function log2( input :in natural ) return integer;
 function powof2 (input :in natural ) return integer;
 function to_string(slv: std_logic_vector) return string ; --chatgpt
+function adj_Pinc_byfreq(freq : in natural) return integer ;
 constant X_clk : integer := 100_000_000 ;
 
+constant accum_inBIT : integer := 28 ;
+constant ram_depth_inNUM :integer := 4096;
 end  pck_log ;
 
 
@@ -77,5 +80,13 @@ begin
     end loop;
     return result;
 end function;
+
+
+function adj_Pinc_byfreq(freq : in natural ) return integer is
+variable out_freq : integer := freq ;
+begin
+return  X_clk /((ram_depth_inNUM) * (powof2(  accum_inBIT-log2(ram_depth_inNUM)  )));
+end function;
+
 
 end package body pck_log ;

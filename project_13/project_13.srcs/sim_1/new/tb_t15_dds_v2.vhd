@@ -48,7 +48,7 @@ constant W_point : integer := 1024 ;
 signal P_clk : time := 1_000ms / X_clk; -- 1ps
 signal clk : std_logic := '1';
 
-    signal C_Wave_freq :  std_logic_vector(log2(C_sys_ram_depth)-1 downto 0) :=   x"006"; 
+    signal C_Wave_freq : integer range 1 to x_clk/10  :=  100_000; 
     
     signal    C_Sin_val     : std_logic_vector(C_sys_ram_width_bitnum-1 downto 0);
     signal    C_Cos_val     : std_logic_vector(C_sys_ram_width_bitnum-1 downto 0) ;
@@ -64,7 +64,7 @@ component t15_dds_v2 is
     Port (
         clk         : in std_logic ;
         reset       : in std_logic :='0' ; 
-        Wave_freq   : in std_logic_vector(log2(sys_ram_depth)-1 downto 0);
+        Wave_freq   :in integer range 1 to x_clk/10  ; 
         Sin_val     :out std_logic_vector(sys_ram_width_bitnum-1 downto 0);
         Cos_val     :out std_logic_vector(sys_ram_width_bitnum-1 downto 0)
      );
@@ -96,7 +96,8 @@ wait for P_clk/2;
 clk <= '0';
 end loop;
 
-C_Wave_freq <= x"008";
+
+C_Wave_freq <= 1_000;
 
 for y in 0 to W_point loop
 wait for P_clk/2;
@@ -106,18 +107,7 @@ clk <= '0';
 end loop;
 
 
-
-C_Wave_freq <= x"00C";
-
-for y in 0 to W_point loop
-wait for P_clk/2;
-clk <= '1';
-wait for P_clk/2;
-clk <= '0';
-end loop;
-
-
-C_Wave_freq <= x"010";
+C_Wave_freq <= 5_000;
 
 for y in 0 to W_point loop
 wait for P_clk/2;
@@ -127,16 +117,7 @@ clk <= '0';
 end loop;
 
 
-C_Wave_freq <= x"020";
-
-for y in 0 to W_point loop
-wait for P_clk/2;
-clk <= '1';
-wait for P_clk/2;
-clk <= '0';
-end loop;
-
-C_Wave_freq <= x"030";
+C_Wave_freq <= 10_000;
 
 for y in 0 to W_point loop
 wait for P_clk/2;
@@ -146,7 +127,7 @@ clk <= '0';
 end loop;
 
 
-C_Wave_freq <= x"040";
+C_Wave_freq <= 20_000;
 
 for y in 0 to W_point loop
 wait for P_clk/2;
@@ -156,7 +137,7 @@ clk <= '0';
 end loop;
 
 
-C_Wave_freq <= x"080";
+C_Wave_freq <= 50_000;
 
 for y in 0 to W_point loop
 wait for P_clk/2;
@@ -166,16 +147,7 @@ clk <= '0';
 end loop;
 
 
-C_Wave_freq <= x"0A0";
-
-for y in 0 to W_point loop
-wait for P_clk/2;
-clk <= '1';
-wait for P_clk/2;
-clk <= '0';
-end loop;
-
-C_Wave_freq <= x"0C0";
+C_Wave_freq <= 75_000;
 
 for y in 0 to W_point loop
 wait for P_clk/2;
@@ -185,7 +157,7 @@ clk <= '0';
 end loop;
 
 
-C_Wave_freq <= x"100";
+C_Wave_freq <= 100_000;
 
 for y in 0 to W_point loop
 wait for P_clk/2;
@@ -195,7 +167,7 @@ clk <= '0';
 end loop;
 
 
-C_Wave_freq <= x"400";
+C_Wave_freq <= 150_000;
 
 for y in 0 to W_point loop
 wait for P_clk/2;
@@ -205,19 +177,7 @@ clk <= '0';
 end loop;
 
 
-
-C_Wave_freq <= x"012";
-
-for y in 0 to W_point loop
-wait for P_clk/2;
-clk <= '1';
-wait for P_clk/2;
-clk <= '0';
-end loop;
-
-
-
-C_Wave_freq <= x"010";
+C_Wave_freq <= 200_000;
 
 for y in 0 to W_point loop
 wait for P_clk/2;
@@ -227,19 +187,7 @@ clk <= '0';
 end loop;
 
 
-
-C_Wave_freq <= x"00E";
-
-for y in 0 to W_point loop
-wait for P_clk/2;
-clk <= '1';
-wait for P_clk/2;
-clk <= '0';
-end loop;
-
-
-
-C_Wave_freq <= x"00C";
+C_Wave_freq <= 250_000;
 
 for y in 0 to W_point loop
 wait for P_clk/2;
@@ -249,8 +197,7 @@ clk <= '0';
 end loop;
 
 
-
-C_Wave_freq <= x"008";
+C_Wave_freq <= 400_000;
 
 for y in 0 to W_point loop
 wait for P_clk/2;
@@ -260,10 +207,54 @@ clk <= '0';
 end loop;
 
 
+C_Wave_freq <= 500_000;
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
 
 
+C_Wave_freq <= 600_000;
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
 
 
+C_Wave_freq <= 750_000;
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+C_Wave_freq <= 800_000;
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
+
+
+C_Wave_freq <= 1_000_000;
+
+for y in 0 to W_point loop
+wait for P_clk/2;
+clk <= '1';
+wait for P_clk/2;
+clk <= '0';
+end loop;
 
 assert false 
 report "Sým Done"

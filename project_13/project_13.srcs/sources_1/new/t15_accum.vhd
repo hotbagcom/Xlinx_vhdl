@@ -42,7 +42,7 @@ entity t15_accum is
     Port (
         clk :in std_logic;
         rst :in std_logic ; 
-        w_freq :in std_logic_vector(Ram_depth_bitsize-1 downto 0) := "000001000000";
+        w_freq :in integer range 1 to x_clk/10  ; 
         addrs : out std_logic_vector(Ram_depth_bitsize-1 downto 0)
      );
 end t15_accum;
@@ -57,7 +57,7 @@ begin
 
 process (clk , rst ) begin 
         if ( rising_edge(clk) and rst= '0' ) then 
-            accum_value <= std_logic_vector ( unsigned (accum_value) + unsigned(w_freq) );
+            accum_value <= std_logic_vector ( unsigned (accum_value) + ( adj_Pinc_byfreq(w_freq ) ) );
         end if ;
         report "inside accum : " &to_string(accum_value) ;
 end process  ;
@@ -70,6 +70,6 @@ end process  ;
         
 --end process  ;
 
-    addrs <= accum_value(Ram_depth_bitsize-1 downto 0);
+    addrs <= accum_value(Accum_bitsize -1 downto Accum_bitsize - Ram_depth_bitsize);
 
 end bhvl_accum;

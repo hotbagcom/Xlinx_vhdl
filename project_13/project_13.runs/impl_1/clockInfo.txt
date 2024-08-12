@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Mon Aug 12 09:38:16 2024
+| Date         : Mon Aug 12 11:17:20 2024
 | Host         : Arif
 | Design       : design_1
 | Device       : xc7k70t-fbv676-1--
