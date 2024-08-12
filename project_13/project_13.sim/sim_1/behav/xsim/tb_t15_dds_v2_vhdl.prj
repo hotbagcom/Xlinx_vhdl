@@ -1,9 +1,9 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
 "../../../../project_13.srcs/sources_1/new/pck_log.vhd" \
+"../../../../project_13.srcs/sources_1/new/ROM_file.vhd" \
 "../../../../project_13.srcs/sources_1/new/t15_accum.vhd" \
 "../../../../project_13.srcs/sources_1/new/t15_dds_v2.vhd" \
-"../../../../project_13.srcs/sources_1/new/t15_wave_bram.vhd" \
 "../../../../project_13.srcs/sim_1/new/tb_t15_dds_v2.vhd" \
 
 # Do not sort compile order

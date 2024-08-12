@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Fri Aug  9 09:34:10 2024
-# Process ID: 13404
+# Start of session at: Mon Aug 12 09:36:57 2024
+# Process ID: 8800
 # Current directory: C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.runs/synth_1
 # Command line: vivado.exe -log t15_dds_v2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source t15_dds_v2.tcl
 # Log file: C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.runs/synth_1/t15_dds_v2.vds
@@ -12,21 +12,22 @@
 # Running On: Arif, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 20, Host memory: 14721 MB
 #-----------------------------------------------------------
 source t15_dds_v2.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 484.902 ; gain = 181.473
 Command: synth_design -top t15_dds_v2 -part xc7k70tfbv676-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13408
+INFO: [Synth 8-7075] Helper process launched with PID 12304
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 931.797 ; gain = 441.473
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 931.461 ; gain = 443.613
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 't15_dds_v2' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:50]
 	Parameter Ram_width_bitsize bound to: 32 - type: integer 
 	Parameter Ram_depth_bitsize bound to: 12 - type: integer 
 	Parameter Accum_bitsize bound to: 28 - type: integer 
-INFO: [Synth 8-3491] module 't15_accum' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:36' bound to instance 'ACC' of component 't15_accum' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:90]
+INFO: [Synth 8-3491] module 't15_accum' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:36' bound to instance 'ACC' of component 't15_accum' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:89]
 INFO: [Synth 8-638] synthesizing module 't15_accum' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:50]
 	Parameter Ram_width_bitsize bound to: 32 - type: integer 
 	Parameter Ram_depth_bitsize bound to: 12 - type: integer 
@@ -34,22 +35,186 @@ INFO: [Synth 8-638] synthesizing module 't15_accum' [C:/Users/arify/OneDrive/Bel
 INFO: [Synth 8-256] done synthesizing module 't15_accum' (0#1) [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:50]
 	Parameter RAM_WIDTH bound to: 32 - type: integer 
 	Parameter RAM_DEPTH bound to: 4096 - type: integer 
-	Parameter RAM_PERFORMANCE bound to: LOW_LATENCY - type: string 
-INFO: [Synth 8-3491] module 't15_wave_bram' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_wave_bram.vhd:36' bound to instance 'Sinwave' of component 't15_wave_bram' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:105]
-INFO: [Synth 8-638] synthesizing module 't15_wave_bram' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_wave_bram.vhd:50]
+INFO: [Synth 8-3491] module 'ROM_file' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/ROM_file.vhd:35' bound to instance 'Sinwave' of component 'ROM_file' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'ROM_file' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/ROM_file.vhd:47]
 	Parameter RAM_WIDTH bound to: 32 - type: integer 
 	Parameter RAM_DEPTH bound to: 4096 - type: integer 
-	Parameter RAM_PERFORMANCE bound to: LOW_LATENCY - type: string 
-ERROR: [Synth 8-3302] unable to open file 'read_only_mem.mem' in 'r' mode [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_wave_bram.vhd:55]
-ERROR: [Synth 8-421] mismatched array sizes in rhs and lhs of assignment [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_wave_bram.vhd:68]
-ERROR: [Synth 8-285] failed synthesizing module 't15_wave_bram' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_wave_bram.vhd:50]
-ERROR: [Synth 8-285] failed synthesizing module 't15_dds_v2' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'ROM_file' (0#1) [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/ROM_file.vhd:47]
+	Parameter RAM_WIDTH bound to: 32 - type: integer 
+	Parameter RAM_DEPTH bound to: 4096 - type: integer 
+INFO: [Synth 8-3491] module 'ROM_file' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/ROM_file.vhd:35' bound to instance 'Coswave' of component 'ROM_file' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 't15_dds_v2' (0#1) [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:50]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1044.035 ; gain = 553.711
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1043.543 ; gain = 555.695
 ---------------------------------------------------------------------------------
-synthesize failed
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1043.543 ; gain = 555.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1043.543 ; gain = 555.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1043.543 ; gain = 555.695
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   12 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
++---ROMs : 
+	                    ROMs := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 1215.512 ; gain = 727.664
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 1218.379 ; gain = 730.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance Sinwave/dout_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance Sinwave/dout_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance Sinwave/dout_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance Sinwave/dout_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance Sinwave/dout_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance Sinwave/dout_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance Sinwave/dout_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance Sinwave/dout_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 1218.379 ; gain = 730.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 1218.398 ; gain = 730.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 1218.398 ; gain = 730.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 1218.398 ; gain = 730.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 1218.398 ; gain = 730.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 1218.398 ; gain = 730.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 1218.398 ; gain = 730.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |     4|
+|3     |LUT1     |     2|
+|4     |LUT2     |    12|
+|5     |RAMB36E1 |     4|
+|6     |FDRE     |    12|
+|7     |IBUF     |    14|
+|8     |OBUF     |    64|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------+----------+------+
+|      |Instance  |Module    |Cells |
++------+----------+----------+------+
+|1     |top       |          |   113|
+|2     |  ACC     |t15_accum |    30|
+|3     |  Sinwave |ROM_file  |     4|
++------+----------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 1218.398 ; gain = 730.551
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 1218.398 ; gain = 730.551
+Synthesis Optimization Complete : Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 1218.398 ; gain = 730.551
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1230.523 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1325.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 81be07e
 INFO: [Common 17-83] Releasing license: Synthesis
-11 Infos, 0 Warnings, 0 Critical Warnings and 5 Errors encountered.
-synth_design failed
-ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
-INFO: [Common 17-206] Exiting Vivado at Fri Aug  9 09:34:21 2024...
+29 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 1325.703 ; gain = 840.801
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1325.703 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.runs/synth_1/t15_dds_v2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file t15_dds_v2_utilization_synth.rpt -pb t15_dds_v2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 12 09:37:31 2024...

@@ -71,18 +71,17 @@ architecture bhvral_top of t15_dds_v2 is
          );
     end component t15_accum;
 
-    component t15_wave_bram is
+    component ROM_file is
         generic(
-            RAM_WIDTH 		: integer 	;				-- Specify RAM data width
-            RAM_DEPTH 		: integer 	;				-- Specify RAM depth (number of entries)
-            RAM_PERFORMANCE : string 	    -- Select "HIGH_PERFORMANCE" or "LOW_LATENCY" 
+            RAM_WIDTH 		: integer 	;			
+            RAM_DEPTH 		: integer 	
         );
         port (
             clk : in std_logic;                                         --for control by wave_freq
             addr: in std_logic_vector(log2(RAM_DEPTH)-1 downto 0);    --ram line 
             dout: out std_logic_vector(RAM_WIDTH-1 downto 0)            --ram line value
         );
-    end component t15_wave_bram;
+    end component ROM_file;
 
     
 begin
@@ -102,26 +101,23 @@ ACC : t15_accum
     );
     
 
-Sinwave : t15_wave_bram 
+Sinwave : ROM_file 
     generic map(
     RAM_WIDTH 		=> sys_ram_width_bitnum,
-    RAM_DEPTH 		=>  sys_ram_depth ,
-    RAM_PERFORMANCE => "LOW_LATENCY" 
+    RAM_DEPTH 		=>  sys_ram_depth
     )
     port map(
     clk     => clk ,                                    
     addr    => ram_adress ,
-    
     dout    => S_Sin_val       
     );
     
     S_phaseshift <= std_logic_vector( unsigned(ram_adress) + to_unsigned( sys_ram_depth/4 , log2(sys_ram_depth) ) );
     
-Coswave : t15_wave_bram 
+Coswave : ROM_file 
     generic map(
     RAM_WIDTH 		=> sys_ram_width_bitnum,
-    RAM_DEPTH 		=> sys_ram_depth ,
-    RAM_PERFORMANCE => "LOW_LATENCY" 
+    RAM_DEPTH 		=> sys_ram_depth 
     ) 
     port map(
     clk     => clk ,                                     

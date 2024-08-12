@@ -70,12 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 7
-set_param synth.incrementalSynthesisCache C:/Users/arify/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11584-Arif/incrSyn
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7k70tfbv676-1
 
@@ -90,11 +84,10 @@ set_property ip_output_repo c:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_11/project_11.sim/sim_1/behav/xsim/read_only_mem.mem
 read_vhdl -library xil_defaultlib {
   C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/pck_log.vhd
+  C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/ROM_file.vhd
   C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd
-  C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_wave_bram.vhd
   C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd
 }
 OPTRACE "Adding files" END { }

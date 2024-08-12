@@ -35,7 +35,7 @@ package pck_log is
 function log2( input :in natural ) return integer;
 function powof2 (input :in natural ) return integer;
 function to_string(slv: std_logic_vector) return string ; --chatgpt
-constant X_clk : integer := 1_000_000_000 ;
+constant X_clk : integer := 100_000_000 ;
 
 end  pck_log ;
 

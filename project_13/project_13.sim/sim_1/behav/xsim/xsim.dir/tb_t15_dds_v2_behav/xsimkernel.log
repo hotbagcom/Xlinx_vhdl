@@ -1,4 +1,4 @@
-Running: xsim.dir/tb_t15_dds_v2_behav/xsimk.exe -simmode gui -wdb tb_t15_dds_v2_behav.wdb -simrunnum 0 -socket 61139
+Running: xsim.dir/tb_t15_dds_v2_behav/xsimk.exe -simmode gui -wdb tb_t15_dds_v2_behav.wdb -simrunnum 0 -socket 64391
 Design successfully loaded
-Design Loading Memory Usage: 8428 KB (Peak: 8428 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 8972 KB (Peak: 8972 KB)
+Design Loading CPU Usage: 30 ms

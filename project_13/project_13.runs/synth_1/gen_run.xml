@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1723185248">
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1723444615">
   <File Type="PA-TCL" Name="t15_dds_v2.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="t15_dds_v2_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="t15_dds_v2_reports.tcl"/>
@@ -17,13 +17,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/t15_accum.vhd">
+    <File Path="$PSRCDIR/sources_1/new/ROM_file.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/t15_wave_bram.vhd">
+    <File Path="$PSRCDIR/sources_1/new/t15_accum.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -35,8 +35,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/t15_wave_bram.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../project_11/project_11.sim/sim_1/behav/xsim/read_only_mem.mem">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>

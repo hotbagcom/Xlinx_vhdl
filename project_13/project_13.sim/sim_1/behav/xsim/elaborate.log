@@ -14,7 +14,7 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package xil_defaultlib.pck_log
 Compiling architecture bhvl_accum of entity xil_defaultlib.t15_accum [\t15_accum(ram_width_bitsize=32,...]
-Compiling architecture behavioral of entity xil_defaultlib.t15_wave_bram [\t15_wave_bram(ram_width=32,ram_...]
+Compiling architecture rom_bhvrl of entity xil_defaultlib.ROM_file [\ROM_file(ram_width=32,ram_depth...]
 Compiling architecture bhvral_top of entity xil_defaultlib.t15_dds_v2 [t15_dds_v2_default]
 Compiling architecture bhvrl_tb_top of entity xil_defaultlib.tb_t15_dds_v2
 Built simulation snapshot tb_t15_dds_v2_behav
