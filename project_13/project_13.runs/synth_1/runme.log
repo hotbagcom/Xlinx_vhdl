@@ -14,7 +14,7 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source t15_dds_v2.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 483.980 ; gain = 183.285
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 483.633 ; gain = 178.098
 Command: read_checkpoint -auto_incremental -incremental C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/utils_1/imports/synth_1/t15_dds_v2.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/utils_1/imports/synth_1/t15_dds_v2.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -26,61 +26,38 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 23820
+INFO: [Synth 8-7075] Helper process launched with PID 17156
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 934.789 ; gain = 439.098
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 935.340 ; gain = 440.160
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 't15_dds_v2' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:50]
+INFO: [Synth 8-638] synthesizing module 't15_dds_v2' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:51]
 	Parameter Ram_width_bitsize bound to: 32 - type: integer 
 	Parameter Ram_depth_bitsize bound to: 12 - type: integer 
 	Parameter Accum_bitsize bound to: 28 - type: integer 
-INFO: [Synth 8-3491] module 't15_accum' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:36' bound to instance 'ACC' of component 't15_accum' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:89]
-INFO: [Synth 8-638] synthesizing module 't15_accum' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:50]
+INFO: [Synth 8-3491] module 't15_accum' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:36' bound to instance 'ACC' of component 't15_accum' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:91]
+INFO: [Synth 8-638] synthesizing module 't15_accum' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:51]
 	Parameter Ram_width_bitsize bound to: 32 - type: integer 
 	Parameter Ram_depth_bitsize bound to: 12 - type: integer 
 	Parameter Accum_bitsize bound to: 28 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 't15_accum' (0#1) [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 't15_accum' (0#1) [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_accum.vhd:51]
 	Parameter RAM_WIDTH bound to: 32 - type: integer 
 	Parameter RAM_DEPTH bound to: 4096 - type: integer 
-INFO: [Synth 8-3491] module 'ROM_file' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/ROM_file.vhd:35' bound to instance 'Sinwave' of component 'ROM_file' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:104]
+INFO: [Synth 8-3491] module 'ROM_file' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/ROM_file.vhd:35' bound to instance 'Sinwave' of component 'ROM_file' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'ROM_file' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/ROM_file.vhd:47]
 	Parameter RAM_WIDTH bound to: 32 - type: integer 
 	Parameter RAM_DEPTH bound to: 4096 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'ROM_file' (0#1) [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/ROM_file.vhd:47]
 	Parameter RAM_WIDTH bound to: 32 - type: integer 
 	Parameter RAM_DEPTH bound to: 4096 - type: integer 
-INFO: [Synth 8-3491] module 'ROM_file' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/ROM_file.vhd:35' bound to instance 'Coswave' of component 'ROM_file' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:117]
-INFO: [Synth 8-256] done synthesizing module 't15_dds_v2' (0#1) [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:50]
-WARNING: [Synth 8-7129] Port rst in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[23] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[22] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[21] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[20] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[19] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[18] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[17] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[16] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[15] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[14] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[13] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[12] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[11] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[10] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[9] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[8] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[7] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[6] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[5] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[4] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[3] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[2] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[1] in module t15_accum is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w_freq[0] in module t15_accum is either unconnected or has no load
+INFO: [Synth 8-3491] module 'ROM_file' declared at 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/ROM_file.vhd:35' bound to instance 'Coswave' of component 'ROM_file' [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:119]
+INFO: [Synth 8-256] done synthesizing module 't15_dds_v2' (0#1) [C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.srcs/sources_1/new/t15_dds_v2.vhd:51]
+WARNING: [Synth 8-7129] Port Wave_freq[25] in module t15_dds_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wave_freq[24] in module t15_dds_v2 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1045.863 ; gain = 550.172
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1047.406 ; gain = 552.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1045.863 ; gain = 550.172
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1047.406 ; gain = 552.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -88,10 +65,10 @@ Start Loading Part and Timing Information
 Loading part: xc7k70tfbv676-1
 INFO: [Device 21-403] Loading part xc7k70tfbv676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1045.863 ; gain = 550.172
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1047.406 ; gain = 552.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1045.863 ; gain = 550.172
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1047.406 ; gain = 552.227
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -99,12 +76,16 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   31 Bit       Adders := 1     
 	   2 Input   12 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 2     
-	               28 Bit    Registers := 1     
 +---ROMs : 
 	                    ROMs := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   31 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -122,40 +103,21 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port reset in module t15_dds_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wave_freq[25] in module t15_dds_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wave_freq[24] in module t15_dds_v2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Wave_freq[23] in module t15_dds_v2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Wave_freq[22] in module t15_dds_v2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Wave_freq[21] in module t15_dds_v2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Wave_freq[20] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[19] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[18] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[17] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[16] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[15] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[14] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[13] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[12] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[11] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[10] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[9] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[8] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[7] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[6] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[5] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[4] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[3] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[2] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[1] in module t15_dds_v2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Wave_freq[0] in module t15_dds_v2 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 1217.797 ; gain = 722.105
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1232.977 ; gain = 737.797
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 1220.441 ; gain = 724.750
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1232.977 ; gain = 737.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -169,7 +131,7 @@ INFO: [Synth 8-7052] The timing for the instance Sinwave/dout_reg_2 (implemented
 INFO: [Synth 8-7052] The timing for the instance Sinwave/dout_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance Sinwave/dout_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 1220.441 ; gain = 724.750
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:24 . Memory (MB): peak = 1232.977 ; gain = 737.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -187,37 +149,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1220.441 ; gain = 724.750
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 1232.977 ; gain = 737.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1220.441 ; gain = 724.750
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 1232.977 ; gain = 737.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1220.441 ; gain = 724.750
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 1232.977 ; gain = 737.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1220.441 ; gain = 724.750
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 1232.977 ; gain = 737.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1220.441 ; gain = 724.750
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 1232.977 ; gain = 737.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1220.441 ; gain = 724.750
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 1232.977 ; gain = 737.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -234,41 +196,50 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     1|
-|2     |RAMB36E1 |     4|
-|3     |IBUF     |     1|
-|4     |OBUF     |    64|
+|2     |CARRY4   |    29|
+|3     |LUT1     |    22|
+|4     |LUT2     |    45|
+|5     |LUT3     |    22|
+|6     |LUT4     |    35|
+|7     |LUT5     |    35|
+|8     |LUT6     |    52|
+|9     |RAMB36E1 |     4|
+|10    |FDRE     |    12|
+|11    |IBUF     |    22|
+|12    |OBUF     |    96|
 +------+---------+------+
 
 Report Instance Areas: 
-+------+----------+---------+------+
-|      |Instance  |Module   |Cells |
-+------+----------+---------+------+
-|1     |top       |         |    70|
-|2     |  Sinwave |ROM_file |     4|
-+------+----------+---------+------+
++------+----------+----------+------+
+|      |Instance  |Module    |Cells |
++------+----------+----------+------+
+|1     |top       |          |   375|
+|2     |  ACC     |t15_accum |   252|
+|3     |  Sinwave |ROM_file  |     4|
++------+----------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1220.441 ; gain = 724.750
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 1232.977 ; gain = 737.797
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 51 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1220.441 ; gain = 724.750
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1220.441 ; gain = 724.750
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 1232.977 ; gain = 737.797
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 1232.977 ; gain = 737.797
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1232.523 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1242.895 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1326.477 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1337.324 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Sistem belirtilen yolu bulamçyor.
-Synth Design complete | Checksum: 8ac87b27
+Synth Design complete | Checksum: 1f232d19
 INFO: [Common 17-83] Releasing license: Synthesis
-33 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:27 . Memory (MB): peak = 1326.477 ; gain = 838.500
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1326.477 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 1337.324 ; gain = 849.688
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1337.324 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/arify/OneDrive/Belgeler/Xlinx_vhdl/project_13/project_13.runs/synth_1/t15_dds_v2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file t15_dds_v2_utilization_synth.rpt -pb t15_dds_v2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Aug 12 11:16:39 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 12 14:53:10 2024...

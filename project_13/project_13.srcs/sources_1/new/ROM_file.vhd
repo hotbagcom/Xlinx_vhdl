@@ -4152,10 +4152,10 @@ begin
 
 getvalue : process(clk)
 begin
-if rising_edge(clk) then 
-dout <=  to_stdlogicvector (  ROM( to_integer(unsigned(addr)) )  );
 
-end if;
+    if rising_edge(clk) then 
+        dout <=  to_stdlogicvector (  ROM( to_integer(unsigned(addr)) )  );
+    end if;
 end process ;
 
 

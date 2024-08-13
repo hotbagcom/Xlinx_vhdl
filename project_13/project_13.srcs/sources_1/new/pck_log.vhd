@@ -33,9 +33,11 @@ use IEEE.NUMERIC_STD.ALL;
 
 package pck_log is
 function log2( input :in natural ) return integer;
+function log10( input :in natural ) return integer;
 function powof2 (input :in natural ) return integer;
 function to_string(slv: std_logic_vector) return string ; --chatgpt
 function adj_Pinc_byfreq(freq : in natural) return integer ;
+
 constant X_clk : integer := 100_000_000 ;
 
 constant accum_inBIT : integer := 28 ;
@@ -56,6 +58,17 @@ function log2( input :in natural ) return integer is
     while temp > 1 loop 
         return_val := return_val +1 ;
         temp := temp /2 ;
+    end loop;
+    return return_val ;
+end function ;
+function log10( input :in natural ) return integer is
+    variable temp       : integer := input ;
+    variable return_val : integer := 0;
+    
+    begin 
+    while temp > 1 loop 
+        return_val := return_val +1 ;
+        temp := temp /10 ;
     end loop;
     return return_val ;
 end function ;
@@ -81,11 +94,26 @@ begin
     return result;
 end function;
 
+function to_string(slv: integer ) return string is -- unfinished
+    variable temp : integer := log10(slv) ;
+    variable result: string(1 to temp );
+begin
+--    while slv loop
+--        result(i ) := character'VALUE(std_ulogic'IMAGE(slv(i)));
+--    end loop;
+    return result;
+end function;
 
 function adj_Pinc_byfreq(freq : in natural ) return integer is
-variable out_freq : integer := freq ;
+    variable out_freq : integer := freq ;
 begin
-return  X_clk /((ram_depth_inNUM) * (powof2(  accum_inBIT-log2(ram_depth_inNUM)  )));
+-- manupulation for floating point 
+
+    return (   powof2(accum_inBIT)/ ( X_clk/100 )   )* ( out_freq/100 )   ;
+   --return (    out_freq * ram_depth_inNUM * powof2( accum_inBIT - log2(ram_depth_inNUM) )  ) / (X_clk  ) ;
+   -- 15 ns 0001111011101001100110011000 5 
+   -- 15 ns 0000001111010001100110011000 4
+   -- 15 ns 0000000111110111000110011000 3
 end function;
 
 
