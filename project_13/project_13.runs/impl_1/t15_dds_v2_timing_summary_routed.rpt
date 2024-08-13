@@ -1,0 +1,1110 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Tue Aug 13 16:00:53 2024
+| Host         : Arif running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file t15_dds_v2_timing_summary_routed.rpt -pb t15_dds_v2_timing_summary_routed.pb -rpx t15_dds_v2_timing_summary_routed.rpx -warn_on_violation
+| Design       : t15_dds_v2
+| Device       : 7k70t-fbv676
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  9           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (9)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (117)
+5. checking no_input_delay (4)
+6. checking no_output_delay (64)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (9)
+------------------------
+ There are 9 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (117)
+--------------------------------------------------
+ There are 117 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (4)
+------------------------------
+ There are 4 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (64)
+--------------------------------
+ There are 64 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  181          inf        0.000                      0                  181           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           181 Endpoints
+Min Delay           181 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 mode_sFREQ[0]
+                            (input port)
+  Destination:            ACC/accum_value_reg/A[11]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.692ns  (logic 3.651ns (28.769%)  route 9.041ns (71.231%))
+  Logic Levels:           21  (CARRY4=12 IBUF=1 LUT3=4 LUT5=3 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    L24                                               0.000     0.000 r  mode_sFREQ[0] (IN)
+                         net (fo=0)                   0.000     0.000    mode_sFREQ[0]
+    L24                  IBUF (Prop_ibuf_I_O)         0.868     0.868 r  mode_sFREQ_IBUF[0]_inst/O
+                         net (fo=184, routed)         2.544     3.412    ACC/mode_sFREQ_IBUF[0]
+    SLICE_X8Y28          LUT3 (Prop_lut3_I1_O)        0.053     3.465 r  ACC/adj_Pinc_byfreq0_carry_i_2/O
+                         net (fo=1, routed)           0.000     3.465    ACC/adj_Pinc_byfreq0_carry_i_2_n_0
+    SLICE_X8Y28          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     3.681 r  ACC/adj_Pinc_byfreq0_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.681    ACC/adj_Pinc_byfreq0_carry_n_0
+    SLICE_X8Y29          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.741 r  ACC/adj_Pinc_byfreq0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.741    ACC/adj_Pinc_byfreq0_carry__0_n_0
+    SLICE_X8Y30          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.801 r  ACC/adj_Pinc_byfreq0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.801    ACC/adj_Pinc_byfreq0_carry__1_n_0
+    SLICE_X8Y31          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.861 r  ACC/adj_Pinc_byfreq0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     3.861    ACC/adj_Pinc_byfreq0_carry__2_n_0
+    SLICE_X8Y32          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.137     3.998 r  ACC/adj_Pinc_byfreq0_carry__3/O[2]
+                         net (fo=3, routed)           0.687     4.686    ACC/adj_Pinc_byfreq0_carry__3_n_5
+    SLICE_X6Y34          LUT3 (Prop_lut3_I0_O)        0.152     4.838 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_12/O
+                         net (fo=2, routed)           0.838     5.676    ACC/adj_Pinc_byfreq0__203_carry__2_i_12_n_0
+    SLICE_X12Y35         LUT5 (Prop_lut5_I1_O)        0.053     5.729 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_2/O
+                         net (fo=2, routed)           0.730     6.459    ACC/adj_Pinc_byfreq0__203_carry__2_i_2_n_0
+    SLICE_X9Y35          LUT6 (Prop_lut6_I0_O)        0.053     6.512 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_6/O
+                         net (fo=1, routed)           0.000     6.512    ACC/adj_Pinc_byfreq0__203_carry__2_i_6_n_0
+    SLICE_X9Y35          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     6.747 r  ACC/adj_Pinc_byfreq0__203_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     6.747    ACC/adj_Pinc_byfreq0__203_carry__2_n_0
+    SLICE_X9Y36          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     6.883 f  ACC/adj_Pinc_byfreq0__203_carry__3/O[2]
+                         net (fo=11, routed)          0.870     7.753    ACC/adj_Pinc_byfreq0__203_carry__3_n_5
+    SLICE_X5Y35          LUT3 (Prop_lut3_I0_O)        0.152     7.905 r  ACC/adj_Pinc_byfreq0__283_carry__0_i_1/O
+                         net (fo=1, routed)           0.455     8.360    ACC/adj_Pinc_byfreq0__283_carry__0_i_1_n_0
+    SLICE_X7Y35          CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.230     8.590 r  ACC/adj_Pinc_byfreq0__283_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.590    ACC/adj_Pinc_byfreq0__283_carry__0_n_0
+    SLICE_X7Y36          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.769 r  ACC/adj_Pinc_byfreq0__283_carry__1/O[3]
+                         net (fo=3, routed)           0.931     9.699    ACC/adj_Pinc_byfreq0__283_carry__1_n_4
+    SLICE_X8Y37          LUT5 (Prop_lut5_I1_O)        0.142     9.841 r  ACC/adj_Pinc_byfreq0__340_carry__2_i_8/O
+                         net (fo=1, routed)           0.000     9.841    ACC/adj_Pinc_byfreq0__340_carry__2_i_8_n_0
+    SLICE_X8Y37          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.297    10.138 r  ACC/adj_Pinc_byfreq0__340_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.138    ACC/adj_Pinc_byfreq0__340_carry__2_n_0
+    SLICE_X8Y38          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    10.198 r  ACC/adj_Pinc_byfreq0__340_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    10.198    ACC/adj_Pinc_byfreq0__340_carry__3_n_0
+    SLICE_X8Y39          CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.173    10.371 r  ACC/adj_Pinc_byfreq0__340_carry__4/CO[0]
+                         net (fo=1, routed)           0.407    10.779    ACC/adj_Pinc_byfreq0__340_carry__4_n_3
+    SLICE_X11Y39         LUT5 (Prop_lut5_I0_O)        0.165    10.944 r  ACC/accum_value_reg_i_21/O
+                         net (fo=19, routed)          1.191    12.135    ACC/accum_value_reg_i_21_n_0
+    SLICE_X15Y36         LUT3 (Prop_lut3_I1_O)        0.170    12.305 r  ACC/accum_value_reg_i_9/O
+                         net (fo=1, routed)           0.387    12.692    ACC/p_0_in[11]
+    DSP48_X0Y14          DSP48E1                                      r  ACC/accum_value_reg/A[11]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mode_sFREQ[0]
+                            (input port)
+  Destination:            ACC/accum_value_reg/A[10]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.575ns  (logic 3.651ns (29.038%)  route 8.923ns (70.962%))
+  Logic Levels:           21  (CARRY4=12 IBUF=1 LUT3=4 LUT5=3 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    L24                                               0.000     0.000 r  mode_sFREQ[0] (IN)
+                         net (fo=0)                   0.000     0.000    mode_sFREQ[0]
+    L24                  IBUF (Prop_ibuf_I_O)         0.868     0.868 r  mode_sFREQ_IBUF[0]_inst/O
+                         net (fo=184, routed)         2.544     3.412    ACC/mode_sFREQ_IBUF[0]
+    SLICE_X8Y28          LUT3 (Prop_lut3_I1_O)        0.053     3.465 r  ACC/adj_Pinc_byfreq0_carry_i_2/O
+                         net (fo=1, routed)           0.000     3.465    ACC/adj_Pinc_byfreq0_carry_i_2_n_0
+    SLICE_X8Y28          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     3.681 r  ACC/adj_Pinc_byfreq0_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.681    ACC/adj_Pinc_byfreq0_carry_n_0
+    SLICE_X8Y29          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.741 r  ACC/adj_Pinc_byfreq0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.741    ACC/adj_Pinc_byfreq0_carry__0_n_0
+    SLICE_X8Y30          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.801 r  ACC/adj_Pinc_byfreq0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.801    ACC/adj_Pinc_byfreq0_carry__1_n_0
+    SLICE_X8Y31          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.861 r  ACC/adj_Pinc_byfreq0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     3.861    ACC/adj_Pinc_byfreq0_carry__2_n_0
+    SLICE_X8Y32          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.137     3.998 r  ACC/adj_Pinc_byfreq0_carry__3/O[2]
+                         net (fo=3, routed)           0.687     4.686    ACC/adj_Pinc_byfreq0_carry__3_n_5
+    SLICE_X6Y34          LUT3 (Prop_lut3_I0_O)        0.152     4.838 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_12/O
+                         net (fo=2, routed)           0.838     5.676    ACC/adj_Pinc_byfreq0__203_carry__2_i_12_n_0
+    SLICE_X12Y35         LUT5 (Prop_lut5_I1_O)        0.053     5.729 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_2/O
+                         net (fo=2, routed)           0.730     6.459    ACC/adj_Pinc_byfreq0__203_carry__2_i_2_n_0
+    SLICE_X9Y35          LUT6 (Prop_lut6_I0_O)        0.053     6.512 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_6/O
+                         net (fo=1, routed)           0.000     6.512    ACC/adj_Pinc_byfreq0__203_carry__2_i_6_n_0
+    SLICE_X9Y35          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     6.747 r  ACC/adj_Pinc_byfreq0__203_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     6.747    ACC/adj_Pinc_byfreq0__203_carry__2_n_0
+    SLICE_X9Y36          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     6.883 f  ACC/adj_Pinc_byfreq0__203_carry__3/O[2]
+                         net (fo=11, routed)          0.870     7.753    ACC/adj_Pinc_byfreq0__203_carry__3_n_5
+    SLICE_X5Y35          LUT3 (Prop_lut3_I0_O)        0.152     7.905 r  ACC/adj_Pinc_byfreq0__283_carry__0_i_1/O
+                         net (fo=1, routed)           0.455     8.360    ACC/adj_Pinc_byfreq0__283_carry__0_i_1_n_0
+    SLICE_X7Y35          CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.230     8.590 r  ACC/adj_Pinc_byfreq0__283_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.590    ACC/adj_Pinc_byfreq0__283_carry__0_n_0
+    SLICE_X7Y36          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.769 r  ACC/adj_Pinc_byfreq0__283_carry__1/O[3]
+                         net (fo=3, routed)           0.931     9.699    ACC/adj_Pinc_byfreq0__283_carry__1_n_4
+    SLICE_X8Y37          LUT5 (Prop_lut5_I1_O)        0.142     9.841 r  ACC/adj_Pinc_byfreq0__340_carry__2_i_8/O
+                         net (fo=1, routed)           0.000     9.841    ACC/adj_Pinc_byfreq0__340_carry__2_i_8_n_0
+    SLICE_X8Y37          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.297    10.138 r  ACC/adj_Pinc_byfreq0__340_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.138    ACC/adj_Pinc_byfreq0__340_carry__2_n_0
+    SLICE_X8Y38          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    10.198 r  ACC/adj_Pinc_byfreq0__340_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    10.198    ACC/adj_Pinc_byfreq0__340_carry__3_n_0
+    SLICE_X8Y39          CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.173    10.371 r  ACC/adj_Pinc_byfreq0__340_carry__4/CO[0]
+                         net (fo=1, routed)           0.407    10.779    ACC/adj_Pinc_byfreq0__340_carry__4_n_3
+    SLICE_X11Y39         LUT5 (Prop_lut5_I0_O)        0.165    10.944 r  ACC/accum_value_reg_i_21/O
+                         net (fo=19, routed)          0.967    11.910    ACC/accum_value_reg_i_21_n_0
+    SLICE_X15Y36         LUT3 (Prop_lut3_I1_O)        0.170    12.080 r  ACC/accum_value_reg_i_10/O
+                         net (fo=1, routed)           0.494    12.575    ACC/p_0_in[10]
+    DSP48_X0Y14          DSP48E1                                      r  ACC/accum_value_reg/A[10]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mode_sFREQ[0]
+                            (input port)
+  Destination:            ACC/accum_value_reg/A[9]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.482ns  (logic 3.651ns (29.254%)  route 8.830ns (70.746%))
+  Logic Levels:           21  (CARRY4=12 IBUF=1 LUT3=4 LUT5=3 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    L24                                               0.000     0.000 r  mode_sFREQ[0] (IN)
+                         net (fo=0)                   0.000     0.000    mode_sFREQ[0]
+    L24                  IBUF (Prop_ibuf_I_O)         0.868     0.868 r  mode_sFREQ_IBUF[0]_inst/O
+                         net (fo=184, routed)         2.544     3.412    ACC/mode_sFREQ_IBUF[0]
+    SLICE_X8Y28          LUT3 (Prop_lut3_I1_O)        0.053     3.465 r  ACC/adj_Pinc_byfreq0_carry_i_2/O
+                         net (fo=1, routed)           0.000     3.465    ACC/adj_Pinc_byfreq0_carry_i_2_n_0
+    SLICE_X8Y28          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     3.681 r  ACC/adj_Pinc_byfreq0_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.681    ACC/adj_Pinc_byfreq0_carry_n_0
+    SLICE_X8Y29          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.741 r  ACC/adj_Pinc_byfreq0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.741    ACC/adj_Pinc_byfreq0_carry__0_n_0
+    SLICE_X8Y30          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.801 r  ACC/adj_Pinc_byfreq0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.801    ACC/adj_Pinc_byfreq0_carry__1_n_0
+    SLICE_X8Y31          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.861 r  ACC/adj_Pinc_byfreq0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     3.861    ACC/adj_Pinc_byfreq0_carry__2_n_0
+    SLICE_X8Y32          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.137     3.998 r  ACC/adj_Pinc_byfreq0_carry__3/O[2]
+                         net (fo=3, routed)           0.687     4.686    ACC/adj_Pinc_byfreq0_carry__3_n_5
+    SLICE_X6Y34          LUT3 (Prop_lut3_I0_O)        0.152     4.838 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_12/O
+                         net (fo=2, routed)           0.838     5.676    ACC/adj_Pinc_byfreq0__203_carry__2_i_12_n_0
+    SLICE_X12Y35         LUT5 (Prop_lut5_I1_O)        0.053     5.729 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_2/O
+                         net (fo=2, routed)           0.730     6.459    ACC/adj_Pinc_byfreq0__203_carry__2_i_2_n_0
+    SLICE_X9Y35          LUT6 (Prop_lut6_I0_O)        0.053     6.512 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_6/O
+                         net (fo=1, routed)           0.000     6.512    ACC/adj_Pinc_byfreq0__203_carry__2_i_6_n_0
+    SLICE_X9Y35          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     6.747 r  ACC/adj_Pinc_byfreq0__203_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     6.747    ACC/adj_Pinc_byfreq0__203_carry__2_n_0
+    SLICE_X9Y36          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     6.883 f  ACC/adj_Pinc_byfreq0__203_carry__3/O[2]
+                         net (fo=11, routed)          0.870     7.753    ACC/adj_Pinc_byfreq0__203_carry__3_n_5
+    SLICE_X5Y35          LUT3 (Prop_lut3_I0_O)        0.152     7.905 r  ACC/adj_Pinc_byfreq0__283_carry__0_i_1/O
+                         net (fo=1, routed)           0.455     8.360    ACC/adj_Pinc_byfreq0__283_carry__0_i_1_n_0
+    SLICE_X7Y35          CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.230     8.590 r  ACC/adj_Pinc_byfreq0__283_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.590    ACC/adj_Pinc_byfreq0__283_carry__0_n_0
+    SLICE_X7Y36          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.769 r  ACC/adj_Pinc_byfreq0__283_carry__1/O[3]
+                         net (fo=3, routed)           0.931     9.699    ACC/adj_Pinc_byfreq0__283_carry__1_n_4
+    SLICE_X8Y37          LUT5 (Prop_lut5_I1_O)        0.142     9.841 r  ACC/adj_Pinc_byfreq0__340_carry__2_i_8/O
+                         net (fo=1, routed)           0.000     9.841    ACC/adj_Pinc_byfreq0__340_carry__2_i_8_n_0
+    SLICE_X8Y37          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.297    10.138 r  ACC/adj_Pinc_byfreq0__340_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.138    ACC/adj_Pinc_byfreq0__340_carry__2_n_0
+    SLICE_X8Y38          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    10.198 r  ACC/adj_Pinc_byfreq0__340_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    10.198    ACC/adj_Pinc_byfreq0__340_carry__3_n_0
+    SLICE_X8Y39          CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.173    10.371 r  ACC/adj_Pinc_byfreq0__340_carry__4/CO[0]
+                         net (fo=1, routed)           0.407    10.779    ACC/adj_Pinc_byfreq0__340_carry__4_n_3
+    SLICE_X11Y39         LUT5 (Prop_lut5_I0_O)        0.165    10.944 r  ACC/accum_value_reg_i_21/O
+                         net (fo=19, routed)          0.969    11.912    ACC/accum_value_reg_i_21_n_0
+    SLICE_X15Y36         LUT3 (Prop_lut3_I1_O)        0.170    12.082 r  ACC/accum_value_reg_i_11/O
+                         net (fo=1, routed)           0.399    12.482    ACC/p_0_in[9]
+    DSP48_X0Y14          DSP48E1                                      r  ACC/accum_value_reg/A[9]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mode_sFREQ[0]
+                            (input port)
+  Destination:            ACC/accum_value_reg/A[2]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.457ns  (logic 3.651ns (29.312%)  route 8.805ns (70.688%))
+  Logic Levels:           21  (CARRY4=12 IBUF=1 LUT3=4 LUT5=3 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    L24                                               0.000     0.000 r  mode_sFREQ[0] (IN)
+                         net (fo=0)                   0.000     0.000    mode_sFREQ[0]
+    L24                  IBUF (Prop_ibuf_I_O)         0.868     0.868 r  mode_sFREQ_IBUF[0]_inst/O
+                         net (fo=184, routed)         2.544     3.412    ACC/mode_sFREQ_IBUF[0]
+    SLICE_X8Y28          LUT3 (Prop_lut3_I1_O)        0.053     3.465 r  ACC/adj_Pinc_byfreq0_carry_i_2/O
+                         net (fo=1, routed)           0.000     3.465    ACC/adj_Pinc_byfreq0_carry_i_2_n_0
+    SLICE_X8Y28          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     3.681 r  ACC/adj_Pinc_byfreq0_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.681    ACC/adj_Pinc_byfreq0_carry_n_0
+    SLICE_X8Y29          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.741 r  ACC/adj_Pinc_byfreq0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.741    ACC/adj_Pinc_byfreq0_carry__0_n_0
+    SLICE_X8Y30          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.801 r  ACC/adj_Pinc_byfreq0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.801    ACC/adj_Pinc_byfreq0_carry__1_n_0
+    SLICE_X8Y31          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.861 r  ACC/adj_Pinc_byfreq0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     3.861    ACC/adj_Pinc_byfreq0_carry__2_n_0
+    SLICE_X8Y32          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.137     3.998 r  ACC/adj_Pinc_byfreq0_carry__3/O[2]
+                         net (fo=3, routed)           0.687     4.686    ACC/adj_Pinc_byfreq0_carry__3_n_5
+    SLICE_X6Y34          LUT3 (Prop_lut3_I0_O)        0.152     4.838 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_12/O
+                         net (fo=2, routed)           0.838     5.676    ACC/adj_Pinc_byfreq0__203_carry__2_i_12_n_0
+    SLICE_X12Y35         LUT5 (Prop_lut5_I1_O)        0.053     5.729 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_2/O
+                         net (fo=2, routed)           0.730     6.459    ACC/adj_Pinc_byfreq0__203_carry__2_i_2_n_0
+    SLICE_X9Y35          LUT6 (Prop_lut6_I0_O)        0.053     6.512 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_6/O
+                         net (fo=1, routed)           0.000     6.512    ACC/adj_Pinc_byfreq0__203_carry__2_i_6_n_0
+    SLICE_X9Y35          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     6.747 r  ACC/adj_Pinc_byfreq0__203_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     6.747    ACC/adj_Pinc_byfreq0__203_carry__2_n_0
+    SLICE_X9Y36          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     6.883 f  ACC/adj_Pinc_byfreq0__203_carry__3/O[2]
+                         net (fo=11, routed)          0.870     7.753    ACC/adj_Pinc_byfreq0__203_carry__3_n_5
+    SLICE_X5Y35          LUT3 (Prop_lut3_I0_O)        0.152     7.905 r  ACC/adj_Pinc_byfreq0__283_carry__0_i_1/O
+                         net (fo=1, routed)           0.455     8.360    ACC/adj_Pinc_byfreq0__283_carry__0_i_1_n_0
+    SLICE_X7Y35          CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.230     8.590 r  ACC/adj_Pinc_byfreq0__283_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.590    ACC/adj_Pinc_byfreq0__283_carry__0_n_0
+    SLICE_X7Y36          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.769 r  ACC/adj_Pinc_byfreq0__283_carry__1/O[3]
+                         net (fo=3, routed)           0.931     9.699    ACC/adj_Pinc_byfreq0__283_carry__1_n_4
+    SLICE_X8Y37          LUT5 (Prop_lut5_I1_O)        0.142     9.841 r  ACC/adj_Pinc_byfreq0__340_carry__2_i_8/O
+                         net (fo=1, routed)           0.000     9.841    ACC/adj_Pinc_byfreq0__340_carry__2_i_8_n_0
+    SLICE_X8Y37          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.297    10.138 r  ACC/adj_Pinc_byfreq0__340_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.138    ACC/adj_Pinc_byfreq0__340_carry__2_n_0
+    SLICE_X8Y38          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    10.198 r  ACC/adj_Pinc_byfreq0__340_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    10.198    ACC/adj_Pinc_byfreq0__340_carry__3_n_0
+    SLICE_X8Y39          CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.173    10.371 r  ACC/adj_Pinc_byfreq0__340_carry__4/CO[0]
+                         net (fo=1, routed)           0.407    10.779    ACC/adj_Pinc_byfreq0__340_carry__4_n_3
+    SLICE_X11Y39         LUT5 (Prop_lut5_I0_O)        0.165    10.944 r  ACC/accum_value_reg_i_21/O
+                         net (fo=19, routed)          0.948    11.892    ACC/accum_value_reg_i_21_n_0
+    SLICE_X12Y34         LUT3 (Prop_lut3_I1_O)        0.170    12.062 r  ACC/accum_value_reg_i_18/O
+                         net (fo=1, routed)           0.395    12.457    ACC/p_0_in[2]
+    DSP48_X0Y14          DSP48E1                                      r  ACC/accum_value_reg/A[2]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mode_sFREQ[0]
+                            (input port)
+  Destination:            ACC/accum_value_reg/A[1]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.448ns  (logic 3.651ns (29.333%)  route 8.797ns (70.667%))
+  Logic Levels:           21  (CARRY4=12 IBUF=1 LUT3=4 LUT5=3 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    L24                                               0.000     0.000 r  mode_sFREQ[0] (IN)
+                         net (fo=0)                   0.000     0.000    mode_sFREQ[0]
+    L24                  IBUF (Prop_ibuf_I_O)         0.868     0.868 r  mode_sFREQ_IBUF[0]_inst/O
+                         net (fo=184, routed)         2.544     3.412    ACC/mode_sFREQ_IBUF[0]
+    SLICE_X8Y28          LUT3 (Prop_lut3_I1_O)        0.053     3.465 r  ACC/adj_Pinc_byfreq0_carry_i_2/O
+                         net (fo=1, routed)           0.000     3.465    ACC/adj_Pinc_byfreq0_carry_i_2_n_0
+    SLICE_X8Y28          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     3.681 r  ACC/adj_Pinc_byfreq0_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.681    ACC/adj_Pinc_byfreq0_carry_n_0
+    SLICE_X8Y29          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.741 r  ACC/adj_Pinc_byfreq0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.741    ACC/adj_Pinc_byfreq0_carry__0_n_0
+    SLICE_X8Y30          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.801 r  ACC/adj_Pinc_byfreq0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.801    ACC/adj_Pinc_byfreq0_carry__1_n_0
+    SLICE_X8Y31          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.861 r  ACC/adj_Pinc_byfreq0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     3.861    ACC/adj_Pinc_byfreq0_carry__2_n_0
+    SLICE_X8Y32          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.137     3.998 r  ACC/adj_Pinc_byfreq0_carry__3/O[2]
+                         net (fo=3, routed)           0.687     4.686    ACC/adj_Pinc_byfreq0_carry__3_n_5
+    SLICE_X6Y34          LUT3 (Prop_lut3_I0_O)        0.152     4.838 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_12/O
+                         net (fo=2, routed)           0.838     5.676    ACC/adj_Pinc_byfreq0__203_carry__2_i_12_n_0
+    SLICE_X12Y35         LUT5 (Prop_lut5_I1_O)        0.053     5.729 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_2/O
+                         net (fo=2, routed)           0.730     6.459    ACC/adj_Pinc_byfreq0__203_carry__2_i_2_n_0
+    SLICE_X9Y35          LUT6 (Prop_lut6_I0_O)        0.053     6.512 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_6/O
+                         net (fo=1, routed)           0.000     6.512    ACC/adj_Pinc_byfreq0__203_carry__2_i_6_n_0
+    SLICE_X9Y35          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     6.747 r  ACC/adj_Pinc_byfreq0__203_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     6.747    ACC/adj_Pinc_byfreq0__203_carry__2_n_0
+    SLICE_X9Y36          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     6.883 f  ACC/adj_Pinc_byfreq0__203_carry__3/O[2]
+                         net (fo=11, routed)          0.870     7.753    ACC/adj_Pinc_byfreq0__203_carry__3_n_5
+    SLICE_X5Y35          LUT3 (Prop_lut3_I0_O)        0.152     7.905 r  ACC/adj_Pinc_byfreq0__283_carry__0_i_1/O
+                         net (fo=1, routed)           0.455     8.360    ACC/adj_Pinc_byfreq0__283_carry__0_i_1_n_0
+    SLICE_X7Y35          CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.230     8.590 r  ACC/adj_Pinc_byfreq0__283_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.590    ACC/adj_Pinc_byfreq0__283_carry__0_n_0
+    SLICE_X7Y36          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.769 r  ACC/adj_Pinc_byfreq0__283_carry__1/O[3]
+                         net (fo=3, routed)           0.931     9.699    ACC/adj_Pinc_byfreq0__283_carry__1_n_4
+    SLICE_X8Y37          LUT5 (Prop_lut5_I1_O)        0.142     9.841 r  ACC/adj_Pinc_byfreq0__340_carry__2_i_8/O
+                         net (fo=1, routed)           0.000     9.841    ACC/adj_Pinc_byfreq0__340_carry__2_i_8_n_0
+    SLICE_X8Y37          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.297    10.138 r  ACC/adj_Pinc_byfreq0__340_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.138    ACC/adj_Pinc_byfreq0__340_carry__2_n_0
+    SLICE_X8Y38          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    10.198 r  ACC/adj_Pinc_byfreq0__340_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    10.198    ACC/adj_Pinc_byfreq0__340_carry__3_n_0
+    SLICE_X8Y39          CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.173    10.371 r  ACC/adj_Pinc_byfreq0__340_carry__4/CO[0]
+                         net (fo=1, routed)           0.407    10.779    ACC/adj_Pinc_byfreq0__340_carry__4_n_3
+    SLICE_X11Y39         LUT5 (Prop_lut5_I0_O)        0.165    10.944 r  ACC/accum_value_reg_i_21/O
+                         net (fo=19, routed)          0.946    11.890    ACC/accum_value_reg_i_21_n_0
+    SLICE_X12Y34         LUT3 (Prop_lut3_I1_O)        0.170    12.060 r  ACC/accum_value_reg_i_19/O
+                         net (fo=1, routed)           0.388    12.448    ACC/p_0_in[1]
+    DSP48_X0Y14          DSP48E1                                      r  ACC/accum_value_reg/A[1]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mode_sFREQ[0]
+                            (input port)
+  Destination:            ACC/accum_value_reg/A[3]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.435ns  (logic 3.651ns (29.364%)  route 8.783ns (70.636%))
+  Logic Levels:           21  (CARRY4=12 IBUF=1 LUT3=4 LUT5=3 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    L24                                               0.000     0.000 r  mode_sFREQ[0] (IN)
+                         net (fo=0)                   0.000     0.000    mode_sFREQ[0]
+    L24                  IBUF (Prop_ibuf_I_O)         0.868     0.868 r  mode_sFREQ_IBUF[0]_inst/O
+                         net (fo=184, routed)         2.544     3.412    ACC/mode_sFREQ_IBUF[0]
+    SLICE_X8Y28          LUT3 (Prop_lut3_I1_O)        0.053     3.465 r  ACC/adj_Pinc_byfreq0_carry_i_2/O
+                         net (fo=1, routed)           0.000     3.465    ACC/adj_Pinc_byfreq0_carry_i_2_n_0
+    SLICE_X8Y28          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     3.681 r  ACC/adj_Pinc_byfreq0_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.681    ACC/adj_Pinc_byfreq0_carry_n_0
+    SLICE_X8Y29          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.741 r  ACC/adj_Pinc_byfreq0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.741    ACC/adj_Pinc_byfreq0_carry__0_n_0
+    SLICE_X8Y30          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.801 r  ACC/adj_Pinc_byfreq0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.801    ACC/adj_Pinc_byfreq0_carry__1_n_0
+    SLICE_X8Y31          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.861 r  ACC/adj_Pinc_byfreq0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     3.861    ACC/adj_Pinc_byfreq0_carry__2_n_0
+    SLICE_X8Y32          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.137     3.998 r  ACC/adj_Pinc_byfreq0_carry__3/O[2]
+                         net (fo=3, routed)           0.687     4.686    ACC/adj_Pinc_byfreq0_carry__3_n_5
+    SLICE_X6Y34          LUT3 (Prop_lut3_I0_O)        0.152     4.838 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_12/O
+                         net (fo=2, routed)           0.838     5.676    ACC/adj_Pinc_byfreq0__203_carry__2_i_12_n_0
+    SLICE_X12Y35         LUT5 (Prop_lut5_I1_O)        0.053     5.729 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_2/O
+                         net (fo=2, routed)           0.730     6.459    ACC/adj_Pinc_byfreq0__203_carry__2_i_2_n_0
+    SLICE_X9Y35          LUT6 (Prop_lut6_I0_O)        0.053     6.512 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_6/O
+                         net (fo=1, routed)           0.000     6.512    ACC/adj_Pinc_byfreq0__203_carry__2_i_6_n_0
+    SLICE_X9Y35          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     6.747 r  ACC/adj_Pinc_byfreq0__203_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     6.747    ACC/adj_Pinc_byfreq0__203_carry__2_n_0
+    SLICE_X9Y36          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     6.883 f  ACC/adj_Pinc_byfreq0__203_carry__3/O[2]
+                         net (fo=11, routed)          0.870     7.753    ACC/adj_Pinc_byfreq0__203_carry__3_n_5
+    SLICE_X5Y35          LUT3 (Prop_lut3_I0_O)        0.152     7.905 r  ACC/adj_Pinc_byfreq0__283_carry__0_i_1/O
+                         net (fo=1, routed)           0.455     8.360    ACC/adj_Pinc_byfreq0__283_carry__0_i_1_n_0
+    SLICE_X7Y35          CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.230     8.590 r  ACC/adj_Pinc_byfreq0__283_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.590    ACC/adj_Pinc_byfreq0__283_carry__0_n_0
+    SLICE_X7Y36          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.769 r  ACC/adj_Pinc_byfreq0__283_carry__1/O[3]
+                         net (fo=3, routed)           0.931     9.699    ACC/adj_Pinc_byfreq0__283_carry__1_n_4
+    SLICE_X8Y37          LUT5 (Prop_lut5_I1_O)        0.142     9.841 r  ACC/adj_Pinc_byfreq0__340_carry__2_i_8/O
+                         net (fo=1, routed)           0.000     9.841    ACC/adj_Pinc_byfreq0__340_carry__2_i_8_n_0
+    SLICE_X8Y37          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.297    10.138 r  ACC/adj_Pinc_byfreq0__340_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.138    ACC/adj_Pinc_byfreq0__340_carry__2_n_0
+    SLICE_X8Y38          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    10.198 r  ACC/adj_Pinc_byfreq0__340_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    10.198    ACC/adj_Pinc_byfreq0__340_carry__3_n_0
+    SLICE_X8Y39          CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.173    10.371 r  ACC/adj_Pinc_byfreq0__340_carry__4/CO[0]
+                         net (fo=1, routed)           0.407    10.779    ACC/adj_Pinc_byfreq0__340_carry__4_n_3
+    SLICE_X11Y39         LUT5 (Prop_lut5_I0_O)        0.165    10.944 r  ACC/accum_value_reg_i_21/O
+                         net (fo=19, routed)          0.944    11.887    ACC/accum_value_reg_i_21_n_0
+    SLICE_X15Y35         LUT3 (Prop_lut3_I1_O)        0.170    12.057 r  ACC/accum_value_reg_i_17/O
+                         net (fo=1, routed)           0.378    12.435    ACC/p_0_in[3]
+    DSP48_X0Y14          DSP48E1                                      r  ACC/accum_value_reg/A[3]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mode_sFREQ[0]
+                            (input port)
+  Destination:            ACC/accum_value_reg/A[7]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.387ns  (logic 3.651ns (29.478%)  route 8.736ns (70.522%))
+  Logic Levels:           21  (CARRY4=12 IBUF=1 LUT3=4 LUT5=3 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    L24                                               0.000     0.000 r  mode_sFREQ[0] (IN)
+                         net (fo=0)                   0.000     0.000    mode_sFREQ[0]
+    L24                  IBUF (Prop_ibuf_I_O)         0.868     0.868 r  mode_sFREQ_IBUF[0]_inst/O
+                         net (fo=184, routed)         2.544     3.412    ACC/mode_sFREQ_IBUF[0]
+    SLICE_X8Y28          LUT3 (Prop_lut3_I1_O)        0.053     3.465 r  ACC/adj_Pinc_byfreq0_carry_i_2/O
+                         net (fo=1, routed)           0.000     3.465    ACC/adj_Pinc_byfreq0_carry_i_2_n_0
+    SLICE_X8Y28          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     3.681 r  ACC/adj_Pinc_byfreq0_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.681    ACC/adj_Pinc_byfreq0_carry_n_0
+    SLICE_X8Y29          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.741 r  ACC/adj_Pinc_byfreq0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.741    ACC/adj_Pinc_byfreq0_carry__0_n_0
+    SLICE_X8Y30          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.801 r  ACC/adj_Pinc_byfreq0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.801    ACC/adj_Pinc_byfreq0_carry__1_n_0
+    SLICE_X8Y31          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.861 r  ACC/adj_Pinc_byfreq0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     3.861    ACC/adj_Pinc_byfreq0_carry__2_n_0
+    SLICE_X8Y32          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.137     3.998 r  ACC/adj_Pinc_byfreq0_carry__3/O[2]
+                         net (fo=3, routed)           0.687     4.686    ACC/adj_Pinc_byfreq0_carry__3_n_5
+    SLICE_X6Y34          LUT3 (Prop_lut3_I0_O)        0.152     4.838 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_12/O
+                         net (fo=2, routed)           0.838     5.676    ACC/adj_Pinc_byfreq0__203_carry__2_i_12_n_0
+    SLICE_X12Y35         LUT5 (Prop_lut5_I1_O)        0.053     5.729 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_2/O
+                         net (fo=2, routed)           0.730     6.459    ACC/adj_Pinc_byfreq0__203_carry__2_i_2_n_0
+    SLICE_X9Y35          LUT6 (Prop_lut6_I0_O)        0.053     6.512 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_6/O
+                         net (fo=1, routed)           0.000     6.512    ACC/adj_Pinc_byfreq0__203_carry__2_i_6_n_0
+    SLICE_X9Y35          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     6.747 r  ACC/adj_Pinc_byfreq0__203_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     6.747    ACC/adj_Pinc_byfreq0__203_carry__2_n_0
+    SLICE_X9Y36          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     6.883 f  ACC/adj_Pinc_byfreq0__203_carry__3/O[2]
+                         net (fo=11, routed)          0.870     7.753    ACC/adj_Pinc_byfreq0__203_carry__3_n_5
+    SLICE_X5Y35          LUT3 (Prop_lut3_I0_O)        0.152     7.905 r  ACC/adj_Pinc_byfreq0__283_carry__0_i_1/O
+                         net (fo=1, routed)           0.455     8.360    ACC/adj_Pinc_byfreq0__283_carry__0_i_1_n_0
+    SLICE_X7Y35          CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.230     8.590 r  ACC/adj_Pinc_byfreq0__283_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.590    ACC/adj_Pinc_byfreq0__283_carry__0_n_0
+    SLICE_X7Y36          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.769 r  ACC/adj_Pinc_byfreq0__283_carry__1/O[3]
+                         net (fo=3, routed)           0.931     9.699    ACC/adj_Pinc_byfreq0__283_carry__1_n_4
+    SLICE_X8Y37          LUT5 (Prop_lut5_I1_O)        0.142     9.841 r  ACC/adj_Pinc_byfreq0__340_carry__2_i_8/O
+                         net (fo=1, routed)           0.000     9.841    ACC/adj_Pinc_byfreq0__340_carry__2_i_8_n_0
+    SLICE_X8Y37          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.297    10.138 r  ACC/adj_Pinc_byfreq0__340_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.138    ACC/adj_Pinc_byfreq0__340_carry__2_n_0
+    SLICE_X8Y38          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    10.198 r  ACC/adj_Pinc_byfreq0__340_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    10.198    ACC/adj_Pinc_byfreq0__340_carry__3_n_0
+    SLICE_X8Y39          CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.173    10.371 r  ACC/adj_Pinc_byfreq0__340_carry__4/CO[0]
+                         net (fo=1, routed)           0.407    10.779    ACC/adj_Pinc_byfreq0__340_carry__4_n_3
+    SLICE_X11Y39         LUT5 (Prop_lut5_I0_O)        0.165    10.944 r  ACC/accum_value_reg_i_21/O
+                         net (fo=19, routed)          0.772    11.715    ACC/accum_value_reg_i_21_n_0
+    SLICE_X15Y35         LUT3 (Prop_lut3_I1_O)        0.170    11.885 r  ACC/accum_value_reg_i_13/O
+                         net (fo=1, routed)           0.502    12.387    ACC/p_0_in[7]
+    DSP48_X0Y14          DSP48E1                                      r  ACC/accum_value_reg/A[7]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mode_sFREQ[0]
+                            (input port)
+  Destination:            ACC/accum_value_reg/A[15]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.339ns  (logic 3.651ns (29.592%)  route 8.688ns (70.408%))
+  Logic Levels:           21  (CARRY4=12 IBUF=1 LUT3=4 LUT5=3 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    L24                                               0.000     0.000 r  mode_sFREQ[0] (IN)
+                         net (fo=0)                   0.000     0.000    mode_sFREQ[0]
+    L24                  IBUF (Prop_ibuf_I_O)         0.868     0.868 r  mode_sFREQ_IBUF[0]_inst/O
+                         net (fo=184, routed)         2.544     3.412    ACC/mode_sFREQ_IBUF[0]
+    SLICE_X8Y28          LUT3 (Prop_lut3_I1_O)        0.053     3.465 r  ACC/adj_Pinc_byfreq0_carry_i_2/O
+                         net (fo=1, routed)           0.000     3.465    ACC/adj_Pinc_byfreq0_carry_i_2_n_0
+    SLICE_X8Y28          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     3.681 r  ACC/adj_Pinc_byfreq0_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.681    ACC/adj_Pinc_byfreq0_carry_n_0
+    SLICE_X8Y29          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.741 r  ACC/adj_Pinc_byfreq0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.741    ACC/adj_Pinc_byfreq0_carry__0_n_0
+    SLICE_X8Y30          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.801 r  ACC/adj_Pinc_byfreq0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.801    ACC/adj_Pinc_byfreq0_carry__1_n_0
+    SLICE_X8Y31          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.861 r  ACC/adj_Pinc_byfreq0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     3.861    ACC/adj_Pinc_byfreq0_carry__2_n_0
+    SLICE_X8Y32          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.137     3.998 r  ACC/adj_Pinc_byfreq0_carry__3/O[2]
+                         net (fo=3, routed)           0.687     4.686    ACC/adj_Pinc_byfreq0_carry__3_n_5
+    SLICE_X6Y34          LUT3 (Prop_lut3_I0_O)        0.152     4.838 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_12/O
+                         net (fo=2, routed)           0.838     5.676    ACC/adj_Pinc_byfreq0__203_carry__2_i_12_n_0
+    SLICE_X12Y35         LUT5 (Prop_lut5_I1_O)        0.053     5.729 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_2/O
+                         net (fo=2, routed)           0.730     6.459    ACC/adj_Pinc_byfreq0__203_carry__2_i_2_n_0
+    SLICE_X9Y35          LUT6 (Prop_lut6_I0_O)        0.053     6.512 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_6/O
+                         net (fo=1, routed)           0.000     6.512    ACC/adj_Pinc_byfreq0__203_carry__2_i_6_n_0
+    SLICE_X9Y35          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     6.747 r  ACC/adj_Pinc_byfreq0__203_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     6.747    ACC/adj_Pinc_byfreq0__203_carry__2_n_0
+    SLICE_X9Y36          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     6.883 f  ACC/adj_Pinc_byfreq0__203_carry__3/O[2]
+                         net (fo=11, routed)          0.870     7.753    ACC/adj_Pinc_byfreq0__203_carry__3_n_5
+    SLICE_X5Y35          LUT3 (Prop_lut3_I0_O)        0.152     7.905 r  ACC/adj_Pinc_byfreq0__283_carry__0_i_1/O
+                         net (fo=1, routed)           0.455     8.360    ACC/adj_Pinc_byfreq0__283_carry__0_i_1_n_0
+    SLICE_X7Y35          CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.230     8.590 r  ACC/adj_Pinc_byfreq0__283_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.590    ACC/adj_Pinc_byfreq0__283_carry__0_n_0
+    SLICE_X7Y36          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.769 r  ACC/adj_Pinc_byfreq0__283_carry__1/O[3]
+                         net (fo=3, routed)           0.931     9.699    ACC/adj_Pinc_byfreq0__283_carry__1_n_4
+    SLICE_X8Y37          LUT5 (Prop_lut5_I1_O)        0.142     9.841 r  ACC/adj_Pinc_byfreq0__340_carry__2_i_8/O
+                         net (fo=1, routed)           0.000     9.841    ACC/adj_Pinc_byfreq0__340_carry__2_i_8_n_0
+    SLICE_X8Y37          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.297    10.138 r  ACC/adj_Pinc_byfreq0__340_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.138    ACC/adj_Pinc_byfreq0__340_carry__2_n_0
+    SLICE_X8Y38          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    10.198 r  ACC/adj_Pinc_byfreq0__340_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    10.198    ACC/adj_Pinc_byfreq0__340_carry__3_n_0
+    SLICE_X8Y39          CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.173    10.371 r  ACC/adj_Pinc_byfreq0__340_carry__4/CO[0]
+                         net (fo=1, routed)           0.407    10.779    ACC/adj_Pinc_byfreq0__340_carry__4_n_3
+    SLICE_X11Y39         LUT5 (Prop_lut5_I0_O)        0.165    10.944 r  ACC/accum_value_reg_i_21/O
+                         net (fo=19, routed)          0.831    11.774    ACC/accum_value_reg_i_21_n_0
+    SLICE_X12Y37         LUT3 (Prop_lut3_I1_O)        0.170    11.944 r  ACC/accum_value_reg_i_5/O
+                         net (fo=1, routed)           0.395    12.339    ACC/p_0_in[15]
+    DSP48_X0Y14          DSP48E1                                      r  ACC/accum_value_reg/A[15]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mode_sFREQ[0]
+                            (input port)
+  Destination:            ACC/accum_value_reg/A[5]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.281ns  (logic 3.651ns (29.731%)  route 8.630ns (70.269%))
+  Logic Levels:           21  (CARRY4=12 IBUF=1 LUT3=4 LUT5=3 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    L24                                               0.000     0.000 r  mode_sFREQ[0] (IN)
+                         net (fo=0)                   0.000     0.000    mode_sFREQ[0]
+    L24                  IBUF (Prop_ibuf_I_O)         0.868     0.868 r  mode_sFREQ_IBUF[0]_inst/O
+                         net (fo=184, routed)         2.544     3.412    ACC/mode_sFREQ_IBUF[0]
+    SLICE_X8Y28          LUT3 (Prop_lut3_I1_O)        0.053     3.465 r  ACC/adj_Pinc_byfreq0_carry_i_2/O
+                         net (fo=1, routed)           0.000     3.465    ACC/adj_Pinc_byfreq0_carry_i_2_n_0
+    SLICE_X8Y28          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     3.681 r  ACC/adj_Pinc_byfreq0_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.681    ACC/adj_Pinc_byfreq0_carry_n_0
+    SLICE_X8Y29          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.741 r  ACC/adj_Pinc_byfreq0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.741    ACC/adj_Pinc_byfreq0_carry__0_n_0
+    SLICE_X8Y30          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.801 r  ACC/adj_Pinc_byfreq0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.801    ACC/adj_Pinc_byfreq0_carry__1_n_0
+    SLICE_X8Y31          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.861 r  ACC/adj_Pinc_byfreq0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     3.861    ACC/adj_Pinc_byfreq0_carry__2_n_0
+    SLICE_X8Y32          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.137     3.998 r  ACC/adj_Pinc_byfreq0_carry__3/O[2]
+                         net (fo=3, routed)           0.687     4.686    ACC/adj_Pinc_byfreq0_carry__3_n_5
+    SLICE_X6Y34          LUT3 (Prop_lut3_I0_O)        0.152     4.838 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_12/O
+                         net (fo=2, routed)           0.838     5.676    ACC/adj_Pinc_byfreq0__203_carry__2_i_12_n_0
+    SLICE_X12Y35         LUT5 (Prop_lut5_I1_O)        0.053     5.729 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_2/O
+                         net (fo=2, routed)           0.730     6.459    ACC/adj_Pinc_byfreq0__203_carry__2_i_2_n_0
+    SLICE_X9Y35          LUT6 (Prop_lut6_I0_O)        0.053     6.512 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_6/O
+                         net (fo=1, routed)           0.000     6.512    ACC/adj_Pinc_byfreq0__203_carry__2_i_6_n_0
+    SLICE_X9Y35          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     6.747 r  ACC/adj_Pinc_byfreq0__203_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     6.747    ACC/adj_Pinc_byfreq0__203_carry__2_n_0
+    SLICE_X9Y36          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     6.883 f  ACC/adj_Pinc_byfreq0__203_carry__3/O[2]
+                         net (fo=11, routed)          0.870     7.753    ACC/adj_Pinc_byfreq0__203_carry__3_n_5
+    SLICE_X5Y35          LUT3 (Prop_lut3_I0_O)        0.152     7.905 r  ACC/adj_Pinc_byfreq0__283_carry__0_i_1/O
+                         net (fo=1, routed)           0.455     8.360    ACC/adj_Pinc_byfreq0__283_carry__0_i_1_n_0
+    SLICE_X7Y35          CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.230     8.590 r  ACC/adj_Pinc_byfreq0__283_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.590    ACC/adj_Pinc_byfreq0__283_carry__0_n_0
+    SLICE_X7Y36          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.769 r  ACC/adj_Pinc_byfreq0__283_carry__1/O[3]
+                         net (fo=3, routed)           0.931     9.699    ACC/adj_Pinc_byfreq0__283_carry__1_n_4
+    SLICE_X8Y37          LUT5 (Prop_lut5_I1_O)        0.142     9.841 r  ACC/adj_Pinc_byfreq0__340_carry__2_i_8/O
+                         net (fo=1, routed)           0.000     9.841    ACC/adj_Pinc_byfreq0__340_carry__2_i_8_n_0
+    SLICE_X8Y37          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.297    10.138 r  ACC/adj_Pinc_byfreq0__340_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.138    ACC/adj_Pinc_byfreq0__340_carry__2_n_0
+    SLICE_X8Y38          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    10.198 r  ACC/adj_Pinc_byfreq0__340_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    10.198    ACC/adj_Pinc_byfreq0__340_carry__3_n_0
+    SLICE_X8Y39          CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.173    10.371 r  ACC/adj_Pinc_byfreq0__340_carry__4/CO[0]
+                         net (fo=1, routed)           0.407    10.779    ACC/adj_Pinc_byfreq0__340_carry__4_n_3
+    SLICE_X11Y39         LUT5 (Prop_lut5_I0_O)        0.165    10.944 r  ACC/accum_value_reg_i_21/O
+                         net (fo=19, routed)          0.769    11.712    ACC/accum_value_reg_i_21_n_0
+    SLICE_X15Y35         LUT3 (Prop_lut3_I1_O)        0.170    11.882 r  ACC/accum_value_reg_i_15/O
+                         net (fo=1, routed)           0.399    12.281    ACC/p_0_in[5]
+    DSP48_X0Y14          DSP48E1                                      r  ACC/accum_value_reg/A[5]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mode_sFREQ[0]
+                            (input port)
+  Destination:            ACC/accum_value_reg/A[0]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.269ns  (logic 3.651ns (29.761%)  route 8.618ns (70.239%))
+  Logic Levels:           21  (CARRY4=12 IBUF=1 LUT3=4 LUT5=3 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    L24                                               0.000     0.000 r  mode_sFREQ[0] (IN)
+                         net (fo=0)                   0.000     0.000    mode_sFREQ[0]
+    L24                  IBUF (Prop_ibuf_I_O)         0.868     0.868 r  mode_sFREQ_IBUF[0]_inst/O
+                         net (fo=184, routed)         2.544     3.412    ACC/mode_sFREQ_IBUF[0]
+    SLICE_X8Y28          LUT3 (Prop_lut3_I1_O)        0.053     3.465 r  ACC/adj_Pinc_byfreq0_carry_i_2/O
+                         net (fo=1, routed)           0.000     3.465    ACC/adj_Pinc_byfreq0_carry_i_2_n_0
+    SLICE_X8Y28          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     3.681 r  ACC/adj_Pinc_byfreq0_carry/CO[3]
+                         net (fo=1, routed)           0.000     3.681    ACC/adj_Pinc_byfreq0_carry_n_0
+    SLICE_X8Y29          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.741 r  ACC/adj_Pinc_byfreq0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.741    ACC/adj_Pinc_byfreq0_carry__0_n_0
+    SLICE_X8Y30          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.801 r  ACC/adj_Pinc_byfreq0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.801    ACC/adj_Pinc_byfreq0_carry__1_n_0
+    SLICE_X8Y31          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060     3.861 r  ACC/adj_Pinc_byfreq0_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     3.861    ACC/adj_Pinc_byfreq0_carry__2_n_0
+    SLICE_X8Y32          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.137     3.998 r  ACC/adj_Pinc_byfreq0_carry__3/O[2]
+                         net (fo=3, routed)           0.687     4.686    ACC/adj_Pinc_byfreq0_carry__3_n_5
+    SLICE_X6Y34          LUT3 (Prop_lut3_I0_O)        0.152     4.838 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_12/O
+                         net (fo=2, routed)           0.838     5.676    ACC/adj_Pinc_byfreq0__203_carry__2_i_12_n_0
+    SLICE_X12Y35         LUT5 (Prop_lut5_I1_O)        0.053     5.729 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_2/O
+                         net (fo=2, routed)           0.730     6.459    ACC/adj_Pinc_byfreq0__203_carry__2_i_2_n_0
+    SLICE_X9Y35          LUT6 (Prop_lut6_I0_O)        0.053     6.512 r  ACC/adj_Pinc_byfreq0__203_carry__2_i_6/O
+                         net (fo=1, routed)           0.000     6.512    ACC/adj_Pinc_byfreq0__203_carry__2_i_6_n_0
+    SLICE_X9Y35          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     6.747 r  ACC/adj_Pinc_byfreq0__203_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     6.747    ACC/adj_Pinc_byfreq0__203_carry__2_n_0
+    SLICE_X9Y36          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     6.883 f  ACC/adj_Pinc_byfreq0__203_carry__3/O[2]
+                         net (fo=11, routed)          0.870     7.753    ACC/adj_Pinc_byfreq0__203_carry__3_n_5
+    SLICE_X5Y35          LUT3 (Prop_lut3_I0_O)        0.152     7.905 r  ACC/adj_Pinc_byfreq0__283_carry__0_i_1/O
+                         net (fo=1, routed)           0.455     8.360    ACC/adj_Pinc_byfreq0__283_carry__0_i_1_n_0
+    SLICE_X7Y35          CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.230     8.590 r  ACC/adj_Pinc_byfreq0__283_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.590    ACC/adj_Pinc_byfreq0__283_carry__0_n_0
+    SLICE_X7Y36          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.769 r  ACC/adj_Pinc_byfreq0__283_carry__1/O[3]
+                         net (fo=3, routed)           0.931     9.699    ACC/adj_Pinc_byfreq0__283_carry__1_n_4
+    SLICE_X8Y37          LUT5 (Prop_lut5_I1_O)        0.142     9.841 r  ACC/adj_Pinc_byfreq0__340_carry__2_i_8/O
+                         net (fo=1, routed)           0.000     9.841    ACC/adj_Pinc_byfreq0__340_carry__2_i_8_n_0
+    SLICE_X8Y37          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.297    10.138 r  ACC/adj_Pinc_byfreq0__340_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    10.138    ACC/adj_Pinc_byfreq0__340_carry__2_n_0
+    SLICE_X8Y38          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    10.198 r  ACC/adj_Pinc_byfreq0__340_carry__3/CO[3]
+                         net (fo=1, routed)           0.000    10.198    ACC/adj_Pinc_byfreq0__340_carry__3_n_0
+    SLICE_X8Y39          CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.173    10.371 r  ACC/adj_Pinc_byfreq0__340_carry__4/CO[0]
+                         net (fo=1, routed)           0.407    10.779    ACC/adj_Pinc_byfreq0__340_carry__4_n_3
+    SLICE_X11Y39         LUT5 (Prop_lut5_I0_O)        0.165    10.944 r  ACC/accum_value_reg_i_21/O
+                         net (fo=19, routed)          0.764    11.708    ACC/accum_value_reg_i_21_n_0
+    SLICE_X12Y34         LUT3 (Prop_lut3_I1_O)        0.170    11.878 r  ACC/accum_value_reg_i_20/O
+                         net (fo=1, routed)           0.391    12.269    ACC/p_0_in[0]
+    DSP48_X0Y14          DSP48E1                                      r  ACC/accum_value_reg/A[0]
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 ACC/accum_value_reg/CLK
+                            (rising edge-triggered cell DSP48E1)
+  Destination:            Sinwave/dout_reg_0/ADDRARDADDR[11]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.379ns  (logic 0.107ns (28.259%)  route 0.272ns (71.741%))
+  Logic Levels:           1  (DSP48E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y14          DSP48E1                      0.000     0.000 r  ACC/accum_value_reg/CLK
+    DSP48_X0Y14          DSP48E1 (Prop_dsp48e1_CLK_P[24])
+                                                      0.107     0.107 r  ACC/accum_value_reg/P[24]
+                         net (fo=8, routed)           0.272     0.379    Sinwave/addrs[8]
+    RAMB36_X0Y7          RAMB36E1                                     r  Sinwave/dout_reg_0/ADDRARDADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ACC/accum_value_reg/CLK
+                            (rising edge-triggered cell DSP48E1)
+  Destination:            Sinwave/dout_reg_0/ADDRBWRADDR[11]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.379ns  (logic 0.107ns (28.259%)  route 0.272ns (71.741%))
+  Logic Levels:           1  (DSP48E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y14          DSP48E1                      0.000     0.000 r  ACC/accum_value_reg/CLK
+    DSP48_X0Y14          DSP48E1 (Prop_dsp48e1_CLK_P[24])
+                                                      0.107     0.107 r  ACC/accum_value_reg/P[24]
+                         net (fo=8, routed)           0.272     0.379    Sinwave/addrs[8]
+    RAMB36_X0Y7          RAMB36E1                                     r  Sinwave/dout_reg_0/ADDRBWRADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ACC/accum_value_reg/CLK
+                            (rising edge-triggered cell DSP48E1)
+  Destination:            Sinwave/dout_reg_0/ADDRARDADDR[8]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.383ns  (logic 0.107ns (27.961%)  route 0.276ns (72.039%))
+  Logic Levels:           1  (DSP48E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y14          DSP48E1                      0.000     0.000 r  ACC/accum_value_reg/CLK
+    DSP48_X0Y14          DSP48E1 (Prop_dsp48e1_CLK_P[21])
+                                                      0.107     0.107 r  ACC/accum_value_reg/P[21]
+                         net (fo=8, routed)           0.276     0.383    Sinwave/addrs[5]
+    RAMB36_X0Y7          RAMB36E1                                     r  Sinwave/dout_reg_0/ADDRARDADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ACC/accum_value_reg/CLK
+                            (rising edge-triggered cell DSP48E1)
+  Destination:            Sinwave/dout_reg_0/ADDRBWRADDR[8]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.383ns  (logic 0.107ns (27.961%)  route 0.276ns (72.039%))
+  Logic Levels:           1  (DSP48E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y14          DSP48E1                      0.000     0.000 r  ACC/accum_value_reg/CLK
+    DSP48_X0Y14          DSP48E1 (Prop_dsp48e1_CLK_P[21])
+                                                      0.107     0.107 r  ACC/accum_value_reg/P[21]
+                         net (fo=8, routed)           0.276     0.383    Sinwave/addrs[5]
+    RAMB36_X0Y7          RAMB36E1                                     r  Sinwave/dout_reg_0/ADDRBWRADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ACC/accum_value_reg/CLK
+                            (rising edge-triggered cell DSP48E1)
+  Destination:            Sinwave/dout_reg_3/ADDRBWRADDR[3]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.393ns  (logic 0.107ns (27.250%)  route 0.286ns (72.750%))
+  Logic Levels:           1  (DSP48E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y14          DSP48E1                      0.000     0.000 r  ACC/accum_value_reg/CLK
+    DSP48_X0Y14          DSP48E1 (Prop_dsp48e1_CLK_P[16])
+                                                      0.107     0.107 r  ACC/accum_value_reg/P[16]
+                         net (fo=8, routed)           0.286     0.393    Sinwave/addrs[0]
+    RAMB36_X0Y8          RAMB36E1                                     r  Sinwave/dout_reg_3/ADDRBWRADDR[3]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ACC/accum_value_reg/CLK
+                            (rising edge-triggered cell DSP48E1)
+  Destination:            Sinwave/dout_reg_0/ADDRARDADDR[9]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.402ns  (logic 0.107ns (26.648%)  route 0.295ns (73.352%))
+  Logic Levels:           1  (DSP48E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y14          DSP48E1                      0.000     0.000 r  ACC/accum_value_reg/CLK
+    DSP48_X0Y14          DSP48E1 (Prop_dsp48e1_CLK_P[22])
+                                                      0.107     0.107 r  ACC/accum_value_reg/P[22]
+                         net (fo=8, routed)           0.295     0.402    Sinwave/addrs[6]
+    RAMB36_X0Y7          RAMB36E1                                     r  Sinwave/dout_reg_0/ADDRARDADDR[9]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ACC/accum_value_reg/CLK
+                            (rising edge-triggered cell DSP48E1)
+  Destination:            Sinwave/dout_reg_0/ADDRBWRADDR[9]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.402ns  (logic 0.107ns (26.648%)  route 0.295ns (73.352%))
+  Logic Levels:           1  (DSP48E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y14          DSP48E1                      0.000     0.000 r  ACC/accum_value_reg/CLK
+    DSP48_X0Y14          DSP48E1 (Prop_dsp48e1_CLK_P[22])
+                                                      0.107     0.107 r  ACC/accum_value_reg/P[22]
+                         net (fo=8, routed)           0.295     0.402    Sinwave/addrs[6]
+    RAMB36_X0Y7          RAMB36E1                                     r  Sinwave/dout_reg_0/ADDRBWRADDR[9]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ACC/accum_value_reg/CLK
+                            (rising edge-triggered cell DSP48E1)
+  Destination:            Sinwave/dout_reg_0/ADDRARDADDR[7]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.424ns  (logic 0.107ns (25.235%)  route 0.317ns (74.765%))
+  Logic Levels:           1  (DSP48E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y14          DSP48E1                      0.000     0.000 r  ACC/accum_value_reg/CLK
+    DSP48_X0Y14          DSP48E1 (Prop_dsp48e1_CLK_P[20])
+                                                      0.107     0.107 r  ACC/accum_value_reg/P[20]
+                         net (fo=8, routed)           0.317     0.424    Sinwave/addrs[4]
+    RAMB36_X0Y7          RAMB36E1                                     r  Sinwave/dout_reg_0/ADDRARDADDR[7]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ACC/accum_value_reg/CLK
+                            (rising edge-triggered cell DSP48E1)
+  Destination:            Sinwave/dout_reg_3/ADDRBWRADDR[4]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.424ns  (logic 0.107ns (25.220%)  route 0.317ns (74.780%))
+  Logic Levels:           1  (DSP48E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y14          DSP48E1                      0.000     0.000 r  ACC/accum_value_reg/CLK
+    DSP48_X0Y14          DSP48E1 (Prop_dsp48e1_CLK_P[17])
+                                                      0.107     0.107 r  ACC/accum_value_reg/P[17]
+                         net (fo=8, routed)           0.317     0.424    Sinwave/addrs[1]
+    RAMB36_X0Y8          RAMB36E1                                     r  Sinwave/dout_reg_3/ADDRBWRADDR[4]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ACC/accum_value_reg/CLK
+                            (rising edge-triggered cell DSP48E1)
+  Destination:            Sinwave/dout_reg_0/ADDRARDADDR[12]
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.426ns  (logic 0.107ns (25.104%)  route 0.319ns (74.896%))
+  Logic Levels:           1  (DSP48E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y14          DSP48E1                      0.000     0.000 r  ACC/accum_value_reg/CLK
+    DSP48_X0Y14          DSP48E1 (Prop_dsp48e1_CLK_P[25])
+                                                      0.107     0.107 r  ACC/accum_value_reg/P[25]
+                         net (fo=5, routed)           0.319     0.426    Sinwave/addrs[9]
+    RAMB36_X0Y7          RAMB36E1                                     r  Sinwave/dout_reg_0/ADDRARDADDR[12]
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
