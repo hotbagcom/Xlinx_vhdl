@@ -35,6 +35,7 @@ package pck_log is
 function log2( input :in natural ) return integer;
 function log10( input :in natural ) return integer;
 function powof2 (input :in natural ) return integer;
+function powof10 (input :in natural ) return integer;
 function to_string(slv: std_logic_vector) return string ; --chatgpt
 function adj_Pinc_byfreq(freq : in natural) return integer ;
 
@@ -85,6 +86,18 @@ function powof2( input :in natural ) return integer is
     return return_val ;
 end function ;
 
+function powof10( input :in natural ) return integer is
+    variable temp       : integer := input ;
+    variable return_val : integer := 1;
+    
+    begin 
+    while temp >= 1 loop 
+        temp := temp -1 ;
+        return_val := return_val *10 ;
+    end loop;
+    return return_val ;
+end function ;
+
 function to_string(slv: std_logic_vector) return string is
     variable result: string(1 to slv'length);
 begin
@@ -104,7 +117,7 @@ begin
     return result;
 end function;
 
-function adj_Pinc_byfreq(freq : in natural ) return integer is
+function adj_Pinc_byfreq(freq : in natural ) return integer  is
     variable out_freq : integer := freq ;
 begin
 -- manupulation for floating point 
